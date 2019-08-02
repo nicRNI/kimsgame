@@ -6,14 +6,16 @@
 </head>
 <body>
 <script type="text/javascript">
+    var w = 1250;
+    var h = 600;
     var config = {
         type: Phaser.WEBGL,
         scale: {
             parent: 'gameWrapper',
             mode: Phaser.DOM.FIT,
             autoCenter: Phaser.DOM.CENTER_BOTH,
-            width: 800,
-            height: 600
+            width: w,
+            height: h
         },
         backgroundColor: '#D7D7D7',
         plugins: {
@@ -36,16 +38,17 @@
     };
     var game = new Phaser.Game(config);
 
+    var cellSize = 135;
     class grid {
-        constructor(scene, y) {
+        constructor(scene) {
             //make for loop? or would that ruin functionality
-            var xPos = [265, 355, 445, 535];
-            var yPos = [165+y, 255+y, 345+y];
+            var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
+            var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
             var i;
             var j;
             for (i = 0; i < yPos.length; i++) {
                 for (j = 0; j < xPos.length; j++) {
-                    var square = scene.add.rectangle(xPos[j], yPos[i], 90, 90, 0xc1c1c1);
+                    var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
                     square.setStrokeStyle(3, 0x000000);
                     //square.setInteractive(new Phaser.Geom.Rectangle(0, 0, 91, 91), Phaser.Geom.Rectangle.Contains);
                     square.setDepth(8);
@@ -58,7 +61,7 @@
     function create ()
     {
         //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
-        new grid(this, 50);
+        new grid(this);
     }
 
 </script>
