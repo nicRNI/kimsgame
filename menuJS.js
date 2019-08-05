@@ -17,6 +17,7 @@ select.forEach(function(e) {
 });
 
 
+
 function field_focus(field, ID)
 {
     if(field.value == ID)
@@ -50,5 +51,4 @@ $(document).ready(function(){
 $('a').click(function(event){
     event.preventDefault();
 });
-
 

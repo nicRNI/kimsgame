@@ -60,7 +60,7 @@
 
     var spriteSize = 32;
 
-    var cellSize = 135;
+    var cellSize = 160;//135
     class grid {
         constructor(scene) {
             var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
@@ -124,7 +124,7 @@
         var xi = 0;
         for (p = 0; p < 4; p++) {
             for (q = 0; q < 3; q++) {
-                var image = this.add.image(420+(135*p),170+135*q, randArray[xi].name);
+                var image = this.add.image(390+(160*p), 150+160*q, randArray[xi].name);
                 image.setDisplaySize(100,100);
                 image.setDepth(10);
                 xi++;
@@ -161,7 +161,7 @@
         //timer-----------------
         this.initialTime = 120;
         //text for timer
-        timetext = this.add.text(w*.75, 32, 'Time left: ' + formatTime(this.initialTime), {fill: "#000000"});
+        timetext = this.add.text(w*.63, 10, 'Time left: ' + formatTime(this.initialTime), {font: "25px Arial", fill: "#000000"});
         // Each 1000 ms call onEvent
         timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
         //----------------------
