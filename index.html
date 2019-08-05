@@ -33,10 +33,18 @@
             }]
         },
         scene: {
+            preload: preload,
             create: create
         }
     };
     var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+        this.load.spritesheet('bobs', 'assets/bobs-by-cleathley.png', { frameWidth: 32, frameHeight: 32 });
+    }
+
+    var spriteSize = 32;
 
     var cellSize = 135;
     class grid {
@@ -58,12 +66,66 @@
 
     }
 
+    var group;
+    var timetext;
+    var timedEvent;
     function create ()
     {
         //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
         new grid(this);
+
+        //see this code to get random https://labs.phaser.io/edit.html?src=src\game%20objects\group\sprite%20pool.js
+        group = this.make.group({
+            key: 'bobs',                          //FIGURE OUT HOW GROUPS WORK
+            frame: Phaser.Utils.Array.NumberArray(0, 399),
+            randomFrame: true,
+            max: 12,
+            gridAlign: {
+                x: ((w/2) - (1.75*cellSize) + (cellSize/2)),
+                y: ((h/2) - (1.75*cellSize) + (cellSize)),
+                width: 4,
+                height: 3,
+                cellWidth: 135,
+                cellHeight: 135
+            }
+        });
+        group.setDepth(9);
+
+
+        //timer-----------------
+        this.initialTime = 120;
+        //text for timer
+        timetext = this.add.text(w*.75, 32, 'Time left: ' + formatTime(this.initialTime), {fill: "#000000"});
+        // Each 1000 ms call onEvent
+        timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
+        //----------------------
     }
 
+    function formatTime(seconds){
+        // Minutes
+        var minutes = Math.floor(seconds/60);
+        // Seconds
+        var partInSeconds = seconds%60;
+        // Adds left zeros to seconds
+        partInSeconds = partInSeconds.toString().padStart(2,'0');
+        // Returns formated time
+        return `${minutes}:${partInSeconds}`;
+    }
+
+    function onEvent ()
+    {
+        this.initialTime -= 1; // One second
+        if (this.initialTime == 0){
+            timetext.setText('GAMEOVER');
+            timedEvent.destroy();
+
+            //Call event that ends game
+
+        }
+        else{
+            timetext.setText('Time left: ' + formatTime(this.initialTime));
+        }
+    }
 </script>
 </body>
 </html>
