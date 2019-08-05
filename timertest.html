@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+    <script src="dist/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var config = {
+        type: Phaser.CANVAS,
+        width: 800,
+        height: 600,
+        backgroundColor: '#2d2d2d',
+        parent: 'phaser-example',
+        scene: {
+            create: create
+        }
+    };
+
+
+    var timetext;
+    var timedEvent;
+
+    var game = new Phaser.Game(config);
+
+    function create ()
+    {
+        console.log('create');
+        // 2:30 in seconds
+        this.initialTime = 5;
+
+        timetext = this.add.text(32, 32, 'Countdown: ' + formatTime(this.initialTime));
+
+        // Each 1000 ms call onEvent
+        timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
+    }
+
+    function formatTime(seconds){
+        // Minutes
+        var minutes = Math.floor(seconds/60);
+        // Seconds
+        var partInSeconds = seconds%60;
+        // Adds left zeros to seconds
+        partInSeconds = partInSeconds.toString().padStart(2,'0');
+        // Returns formated time
+        return `${minutes}:${partInSeconds}`;
+    }
+
+
+    function onEvent ()
+    {
+        this.initialTime -= 1; // One second
+        if (this.initialTime == 0){
+            timetext.setText('GAMEOVER:');
+            timedEvent.destroy();
+        }
+        else{
+            timetext.setText('Countdown: ' + formatTime(this.initialTime));
+        }
+    }
+    // var w = 1250;
+    // var h = 600;
+    // var config = {
+    //     type: Phaser.WEBGL,
+    //     scale: {
+    //         parent: 'gameWrapper',
+    //         mode: Phaser.DOM.FIT,
+    //         autoCenter: Phaser.DOM.CENTER_BOTH,
+    //         width: w,
+    //         height: h
+    //     },
+    //     backgroundColor: '#D7D7D7',
+    //     plugins: {
+    //         global: [{
+    //             key: 'GameScalePlugin',
+    //             plugin: Phaser.Plugins.GameScalePlugin,
+    //             mapping: 'gameScale',
+    //             data: {
+    //                 minWidth: 400,
+    //                 minHeight: 300,
+    //                 maxWidth: 1600,
+    //                 maxHeight: 1200,
+    //                 snap: 0
+    //             }
+    //         }]
+    //     },
+    //     scene: {
+    //         update: update,
+    //         create: create
+    //     }
+    // };
+    // var game = new Phaser.Game(config);
+    //
+    // function create ()
+    // {
+    //     this.timeInSeconds = 120;
+    //     //make a text field
+    //     var timeText = this.add.text(this.centerX, this.centerY, "0:00");
+    //     //turn the text white
+    //     timeText.fill = "#ffffff";
+    //     //center the text
+    //     //timeText.anchor.set(0.5, 0.5);
+    //     //set up a loop timer
+    //     this.timer = this.time.addEvent.loop(Phaser.Timer.SECOND, this.tick, this);
+    // }
+    //
+    // function tick ()
+    // {
+    //     //subtract a second
+    //     this.timeInSeconds--;
+    //     //find how many complete minutes are left
+    //     var minutes = Math.floor(this.timeInSeconds / 60);
+    //     //find the number of seconds left
+    //     //not counting the minutes
+    //     var seconds = this.timeInSeconds - (minutes * 60);
+    //     //make a string showing the time
+    //     var timeString = this.addZeros(minutes) + ":" + this.addZeros(seconds);
+    //     //display the string in the text field
+    //     this.timeText.text = timeString;
+    //     //check if the time is up
+    //     if (this.timeInSeconds == 0) {
+    //         //remove the timer from the game
+    //         game.time.events.remove(this.timer);
+    //         //call your game over or other code here!
+    //         this.timeText.text="Game Over";
+    //     }
+    // }
+    //
+    // /**
+    //  * add leading zeros to any number less than 10
+    //  * for example turn 1 to 01
+    //  */
+    //
+    // function addZeros (num) {
+    //     if (num < 10) {
+    //         num = "0" + num;
+    //     }
+    //     return num;
+    // }
+    //
+    // function update(){
+    //
+    // }
+</script>
+</body>
+</html>
