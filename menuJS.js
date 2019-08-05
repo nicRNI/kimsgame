@@ -17,28 +17,27 @@ select.forEach(function(e) {
 });
 
 
-let idnum;
-
 function field_focus(field, ID)
 {
     if(field.value == ID)
     {
-        idnum == field.value;
+
         field.value = '';
+
     }
+
 }
 
 function field_blur(field, ID)
 {
     if(field.value == '')
     {
-        idnum == field.value;
+
         field.value = ID;
-
     }
+
+    console.log(field.value, "hi123");
 }
-
-
 
 
 
