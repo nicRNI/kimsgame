@@ -172,18 +172,8 @@
         timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
         //----------------------
 
-//TEMPORARY*****************
-        button = this.add.text(w/2 -85, 500, "Next", {font: "20px Courier New", fill: "#000000", backgroundColor: "#ffffff"}).setPadding({ x: 64, y: 6 })
-            .setInteractive()
-            .on('pointerdown', () => actionOnClick(this) )
-
-        button.setDepth(10);
     }
-
-    function actionOnClick (game) {
-        window.location.href = "tabletest.html"
-    }//*********************************************************TEMPORARY*******************
-
+    
 
     function formatTime(seconds){
         // Minutes
