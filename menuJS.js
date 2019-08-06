@@ -12,10 +12,14 @@ select.forEach(function(e) {
             this.closest('.select').children[0].classList.remove('toggle');
             this.closest('.select').children[0].setAttribute('data-type', this.getAttribute('data-type'));
             this.closest('.select').children[0].innerText = this.innerText;
+            console.log(this.closest('.select').children[0].getAttribute('data-type'));
+            localStorage['Menu'] = this.closest('.select').children[0].getAttribute('data-type');
         });
     });
 });
 
+//****************************USE localStorage example above to help direct to proper instructions page
+//then have each instructions page direct to the right gamemode (pre/post)
 
 
 function field_focus(field, ID)
@@ -44,6 +48,8 @@ var idnum;
 function get_id(field, ID)
 {
     idnum = field.value;
+    localStorage["ID"] = idnum;
+
 }
 
 console.log(idnum, "works?");

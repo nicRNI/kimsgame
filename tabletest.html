@@ -9,16 +9,30 @@
     var dateTime = date+' '+time;
     console.log(dateTime);
 
-    console.log(idnum);
+
+
+
     var data = [
-        ['?', 'programmer'],
-        ['Bar', 'bus driver'],
-        ['Moo', 'Reindeer Hunter']
+        [localStorage["ID"], " "+dateTime+" ",localStorage["Menu"],''],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
+        ['','','',localStorage["item0"],localStorage["color0"],Number(localStorage["itemPos0"])+1],
+        ['','','',localStorage["item1"],localStorage["color1"],Number(localStorage["itemPos1"])+1],
+        ['','','',localStorage["item2"],localStorage["color2"],Number(localStorage["itemPos2"])+1],
+        ['','','',localStorage["item3"],localStorage["color3"],Number(localStorage["itemPos3"])+1],
+        ['','','',localStorage["item4"],localStorage["color4"],Number(localStorage["itemPos4"])+1],
+        ['','','',localStorage["item5"],localStorage["color5"],Number(localStorage["itemPos5"])+1],
+        ['','','',localStorage["item6"],localStorage["color6"],Number(localStorage["itemPos6"])+1],
+        ['','','',localStorage["item7"],localStorage["color7"],Number(localStorage["itemPos7"])+1],
+        ['','','',localStorage["item8"],localStorage["color8"],Number(localStorage["itemPos8"])+1],
+        ['','','',localStorage["item9"],localStorage["color9"],Number(localStorage["itemPos9"])+1],
+        ['','','',localStorage["item10"],localStorage["color10"],Number(localStorage["itemPos10"])+1],
+        ['','','',localStorage["item11"],localStorage["color11"],Number(localStorage["itemPos11"])+1],
+
+
     ];
 
 
     function download_csv() {
-        var csv = 'Name,Title\n';
+        var csv = 'ID,DateTime,MenuChoice,Item,Color,Location,Response\n';
         data.forEach(function(row) {
             csv += row.join(',');
             csv += "\n";
@@ -28,7 +42,7 @@
         var hiddenElement = document.createElement('a');
         hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
         hiddenElement.target = '_blank';
-        hiddenElement.download = 'people.csv';
+        hiddenElement.download = localStorage["ID"]+'KIM.csv';
         hiddenElement.click();
     }
 </script>

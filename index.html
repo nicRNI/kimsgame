@@ -6,6 +6,8 @@
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
     <script src="dist/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
     <script src="assets/imagedict.js"></script>
+
+
 </head>
 <link href='kimstyle.css' rel='stylesheet' type='text/css'>
 
@@ -43,7 +45,6 @@
         }
     };
     var game = new Phaser.Game(config);
-
     function preload ()
     {
         this.load.spritesheet('bobs', 'assets/bobs-by-cleathley.png', { frameWidth: 32, frameHeight: 32 });
@@ -123,9 +124,13 @@
         chooseItems();
 
         var xi = 0;
-        for (p = 0; p < 4; p++) {
-            for (q = 0; q < 3; q++) {
-                var image = this.add.image(390+(160*p), 150+160*q, randArray[xi].name);
+        for (p = 0; p < 3; p++) {
+            for (q = 0; q < 4; q++) {
+                localStorage["item"+xi] = randArray[xi].name;
+                localStorage["itemPos"+xi] = xi;
+                localStorage["color"+xi] = randArray[xi].color;
+
+                var image = this.add.image(390+(160*q), 150+160*p, randArray[xi].name);
                 image.setDisplaySize(100,100);
                 image.setDepth(10);
                 xi++;
@@ -166,7 +171,19 @@
         // Each 1000 ms call onEvent
         timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
         //----------------------
+
+//TEMPORARY*****************
+        button = this.add.text(w/2 -85, 500, "Next", {font: "20px Courier New", fill: "#000000", backgroundColor: "#ffffff"}).setPadding({ x: 64, y: 6 })
+            .setInteractive()
+            .on('pointerdown', () => actionOnClick(this) )
+
+        button.setDepth(10);
     }
+
+    function actionOnClick (game) {
+        window.location.href = "tabletest.html"
+    }//*********************************************************TEMPORARY*******************
+
 
     function formatTime(seconds){
         // Minutes
