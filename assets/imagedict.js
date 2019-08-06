@@ -28,5 +28,11 @@ const o5 = {
     color: 'blue'
 };
 
+const o6 = {
+    img: 'assets/images/bluemittens.png',
+    name: 'bluemittens',
+    color: 'blue'
+};
 
-window.imgArray = [o1, o1, o3, o2, o4, o1, o1, o4, o1, o5, o1, o2, o1, o1, o1, o1, o1, o1, o1]; //make sure 1 of each of the 100? pics
+
+window.imgArray = [o1, o1, o3, o2, o4, o1, o6, o4, o1, o5, o1, o2, o1, o1, o1, o1, o1, o1, o1]; //make sure 1 of each of the 100? pics

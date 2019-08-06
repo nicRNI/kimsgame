@@ -29,6 +29,7 @@ function field_focus(field, ID)
 
 }
 
+
 function field_blur(field, ID)
 {
     if(field.value == '')
@@ -36,10 +37,16 @@ function field_blur(field, ID)
 
         field.value = ID;
     }
-
     console.log(field.value, "hi123");
 }
 
+var idnum;
+function get_id(field, ID)
+{
+    idnum = field.value;
+}
+
+console.log(idnum, "works?");
 
 
 //Fade in dashboard box

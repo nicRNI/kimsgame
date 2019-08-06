@@ -1,20 +1,24 @@
 <link href='menuCSS.css' rel='stylesheet' type='text/css'>
 
-<form method="post" action="index.html">
+<form method="post" action="">
     <div class="box">
         <h1>Kim's Game</h1>
 
-        <input type="ID" name="ID" value="ID" onFocus="field_focus(this, 'ID');" onblur="field_blur(this, 'ID');" class="ID" />
+        <input type="ID" name="ID" value="ID" onFocus="field_focus(this, 'ID');" onblur="field_blur(this, 'ID');" onchange="get_id(this, 'ID');" class="ID" />
         <div class="select">
             <div class="selectBtn" data-type="SelectPhase">Select phase</div>
             <div class="selectDropdown">
-                <div class="option" data-type="firstOption">First option</div>
-                <div class="option" data-type="secondOption">Second option</div>
-                <div class="option" data-type="thirdOption">Third option</div>
+                <div class="option" data-type="firstOption">Onboarding PRE</div>
+                <div class="option" data-type="secondOption">Onboarding POST</div>
+                <div class="option" data-type="thirdOption">Event 1 PRE</div>
+                <div class="option" data-type="fourthOption">Event 1 POST</div>
+                <div class="option" data-type="fifthOption">Event 7 PRE</div>
+                <div class="option" data-type="sixthOption">Event 7 POST</div>
+
             </div>
         </div>
 
-        <a href="instructions.html"><div class="btn">Instructions</div></a> <!-- End Btn -->
+        <a href="tabletest.html"><div class="btn">Instructions</div></a> <!-- End Btn -->
 
     </div> <!-- End Box -->
 

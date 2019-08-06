@@ -1,0 +1,284 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background:#D7D7D7;
+    height: 100vh;
+    margin: 0 auto 0 auto;
+    width:100%;
+    text-align:center;
+    margin: 100px 0px 20px 0px;
+}
+
+
+.ID{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+
+    font-size:15pt;
+    position: fixed;
+    top:200px;
+    left: 539px;
+    width: 120px;
+}
+
+.ID2{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:255px;
+    left: 539px;
+    width: 120px;
+}
+
+.ID3{
+     background:#ecf0f1;
+     text-align: center;
+     color:#262626;
+     font-size:15pt;
+     position: fixed;
+     top:200px;
+     left: 699px;
+     width: 120px;
+ }
+
+.ID4{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+
+    position: fixed;
+    top:255px;
+    left: 699px;
+    width: 120px;
+}
+
+.ID5{
+    font-size:15pt;
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    position: fixed;
+    top:200px;
+    left: 859px;
+    width: 120px;
+}
+
+.ID6{
+    font-size:15pt;
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    position: fixed;
+    top:255px;
+    left: 859px;
+    width: 120px;
+}
+
+.ID7{
+    font-size:15pt;
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    position: fixed;
+    top:200px;
+    left: 1019px;
+    width: 120px;
+}
+
+.ID8{
+    font-size:15pt;
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    position: fixed;
+    top:255px;
+    left: 1019px;
+    width: 120px;
+}
+
+.ID9{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+     font-size:15pt;
+     position: fixed;
+     top:360px;
+     left: 539px;
+     width: 120px;
+ }
+
+.ID10{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:415px;
+    left: 539px;
+    width: 120px;
+}
+
+.ID11{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:360px;
+    left: 699px;
+    width: 120px;
+}
+
+.ID12{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:415px;
+    left: 699px;
+    width: 120px;
+}
+
+.ID13{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:360px;
+    left: 859px;
+    width: 120px;
+}
+
+.ID14{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:415px;
+    left: 859px;
+    width: 120px;
+}
+
+.ID15{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:360px;
+    left: 1019px;
+    width: 120px;
+}
+
+.ID16{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:415px;
+    left: 1019px;
+    width: 120px;
+}
+
+.ID17{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:520px;
+    left: 539px;
+    width: 120px;
+}
+
+.ID18{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:575px;
+    left: 539px;
+    width: 120px;
+}
+
+.ID19{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:520px;
+    left: 699px;
+    width: 120px;
+}
+
+.ID20{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:575px;
+    left: 699px;
+    width: 120px;
+}
+
+.ID21{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:520px;
+    left: 859px;
+    width: 120px;
+}
+
+.ID22{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:575px;
+    left: 859px;
+    width: 120px;
+}
+
+.ID23{
+    background:#ecf0f1;
+    text-align: center;
+    color:#262626;
+    font-size:15pt;
+    position: fixed;
+    top:520px;
+    left: 1019px;
+    width: 120px;
+}
+
+.ID24{
+     background:#ecf0f1;
+     text-align: center;
+     color:#262626;
+     font-size:15pt;
+     position: fixed;
+     top:575px;
+     left: 1019px;
+     width: 120px;
+ }
+
+.submit{
+    font-size:15pt;
+    position: fixed;
+    top:650px;
+    left: 779px;
+    width: 120px;
+}
