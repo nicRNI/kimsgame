@@ -8,25 +8,25 @@ body{
     margin: 100px 0px 20px 0px;
 }
 
-
 .ID{
     background:#ecf0f1;
     text-align: center;
     color:#262626;
 
     font-size:15pt;
-    position: relative;
-    bottom:480px;
+    position: fixed;
+    top: 200px;
     left: 539px;
     width: 120px;
 }
+
 
 .ID2{
     background:#ecf0f1;
     text-align: center;
     color:#262626;
     font-size:15pt;
-    position: relative;
+    position: fixed;
     top:255px;
     left: 539px;
     width: 120px;
