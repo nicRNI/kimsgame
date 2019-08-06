@@ -15,7 +15,7 @@ body{
     color:#262626;
 
     font-size:15pt;
-    position: fixed;
+    position: absolute;
     top:200px;
     left: 539px;
     width: 120px;
@@ -26,7 +26,7 @@ body{
     text-align: center;
     color:#262626;
     font-size:15pt;
-    position: fixed;
+    position: absolute;
     top:255px;
     left: 539px;
     width: 120px;
