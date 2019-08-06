@@ -37,125 +37,126 @@
         <input type="text1" name="Item" value="Item name" onFocus="field_focus(this, 'Item name');" onblur="field_blur(this, 'Item name');"  class="ID23" />
         <input type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID24" />
         <input type="submit" value="Submit" class="submit">
+
+        <script type="text/javascript">
+            //add submit all at the end, which sends data to the csv???
+            //make inputs required???
+
+
+            var w = 1250;
+            var h = 600;
+            var config = {
+                type: Phaser.WEBGL,
+                scale: {
+                    parent: 'gameWrapper',
+                    mode: Phaser.DOM.FIT,
+                    autoCenter: Phaser.DOM.CENTER_BOTH,
+                    width: w,
+                    height: h
+                },
+
+                backgroundColor: '#D7D7D7',
+                plugins: {
+                    global: [{
+                        key: 'GameScalePlugin',
+                        plugin: Phaser.Plugins.GameScalePlugin,
+                        mapping: 'gameScale',
+                        data: {
+                            minWidth: 400,
+                            minHeight: 300,
+                            maxWidth: 1600,
+                            maxHeight: 1200,
+                            snap: 0
+                        }
+                    }]
+                },
+                scene: {
+                    preload: preload,
+                    create: create
+                }
+            };
+            var game = new Phaser.Game(config);
+
+            function preload ()
+            {
+            }
+
+            var cellSize = 160;//135
+            class grid {
+                constructor(scene) {
+                    var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
+                    var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
+                    var i;
+                    var j;
+                    for (i = 0; i < yPos.length; i++) {
+                        for (j = 0; j < xPos.length; j++) {
+                            var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
+                            square.setStrokeStyle(3, 0x000000);
+                            //square.setInteractive(new Phaser.Geom.Rectangle(0, 0, 91, 91), Phaser.Geom.Rectangle.Contains);
+                            square.setDepth(8);
+                        }
+                    }  //could make an array of square coords for pics?
+                }
+
+            }
+
+
+
+
+            var group;
+            var timetext;
+            var timedEvent;
+            function create ()
+            {
+                //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
+                new grid(this);
+
+                var inst = this.add.text(330, 2, "Click on spaces on the grid to enter or edit your KIMs Game responses:", { font: "18px Arial", fill: "#000000"});
+
+
+
+
+
+                //timer-----------------
+                this.initialTime = 300;
+                //text for timer
+                timetext = this.add.text(w*.635, 30, 'Time left: ' + formatTime(this.initialTime), {font: "23px Arial", fill: "#000000"});
+                // Each 1000 ms call onEvent
+                timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
+                //----------------------
+            }
+
+            function formatTime(seconds){
+                // Minutes
+                var minutes = Math.floor(seconds/60);
+                // Seconds
+                var partInSeconds = seconds%60;
+                // Adds left zeros to seconds
+                partInSeconds = partInSeconds.toString().padStart(2,'0');
+                // Returns formated time
+                return `${minutes}:${partInSeconds}`;
+            }
+
+            function onEvent ()
+            {
+                this.initialTime -= 1; // One second
+                if (this.initialTime == 0){
+                    timetext.setText('GAMEOVER');
+                    timedEvent.destroy();
+
+                    //Call event that ends game
+
+                }
+                else{
+                    timetext.setText('Time left: ' + formatTime(this.initialTime));
+                }
+            }
+        </script>
     </div>
-    <div id="phaser-example"></div>
 
 </head>
 
 
-<script type="text/javascript">
-    //add submit all at the end, which sends data to the csv???
-    //make inputs required???
 
-
-    var w = 1250;
-    var h = 600;
-    var config = {
-        type: Phaser.WEBGL,
-        scale: {
-            parent: 'gameWrapper',
-            mode: Phaser.DOM.FIT,
-            autoCenter: Phaser.DOM.CENTER_BOTH,
-            width: w,
-            height: h
-        },
-
-        backgroundColor: '#D7D7D7',
-        plugins: {
-            global: [{
-                key: 'GameScalePlugin',
-                plugin: Phaser.Plugins.GameScalePlugin,
-                mapping: 'gameScale',
-                data: {
-                    minWidth: 400,
-                    minHeight: 300,
-                    maxWidth: 1600,
-                    maxHeight: 1200,
-                    snap: 0
-                }
-            }]
-        },
-        scene: {
-            preload: preload,
-            create: create
-        }
-    };
-    var game = new Phaser.Game(config);
-
-    function preload ()
-    {
-    }
-
-    var cellSize = 160;//135
-    class grid {
-        constructor(scene) {
-            var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
-            var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
-            var i;
-            var j;
-            for (i = 0; i < yPos.length; i++) {
-                for (j = 0; j < xPos.length; j++) {
-                    var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
-                    square.setStrokeStyle(3, 0x000000);
-                    //square.setInteractive(new Phaser.Geom.Rectangle(0, 0, 91, 91), Phaser.Geom.Rectangle.Contains);
-                    square.setDepth(8);
-                }
-            }  //could make an array of square coords for pics?
-        }
-
-    }
-
-
-
-
-    var group;
-    var timetext;
-    var timedEvent;
-    function create ()
-    {
-        //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
-        new grid(this);
-
-        var inst = this.add.text(330, 2, "Click on spaces on the grid to enter or edit your KIMs Game responses:", { font: "18px Arial", fill: "#000000"});
-
-
-
-
-
-        //timer-----------------
-        this.initialTime = 300;
-        //text for timer
-        timetext = this.add.text(w*.635, 30, 'Time left: ' + formatTime(this.initialTime), {font: "23px Arial", fill: "#000000"});
-        // Each 1000 ms call onEvent
-        timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
-        //----------------------
-    }
-
-    function formatTime(seconds){
-        // Minutes
-        var minutes = Math.floor(seconds/60);
-        // Seconds
-        var partInSeconds = seconds%60;
-        // Adds left zeros to seconds
-        partInSeconds = partInSeconds.toString().padStart(2,'0');
-        // Returns formated time
-        return `${minutes}:${partInSeconds}`;
-    }
-
-    function onEvent ()
-    {
-        this.initialTime -= 1; // One second
-        if (this.initialTime == 0){
-            timetext.setText('GAMEOVER');
-            timedEvent.destroy();
-
-            //Call event that ends game
-
-        }
-        else{
-            timetext.setText('Time left: ' + formatTime(this.initialTime));
-        }
-    }
-</script>
 </body>
 </html>
