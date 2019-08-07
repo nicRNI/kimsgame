@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta name="apple-mobile-web-app-capable"
+      content="yes" />
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+    <script src="dist/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
+    <script src="assets/imagedict.js"></script>
+
+</head>
+
+<body>
+<script type="text/javascript">
+    var w = 1250;
+    var config = {
+        type: Phaser.WEBGL,
+        scale: {
+            parent: 'gameWrapper',
+            mode: Phaser.DOM.FIT,
+            autoCenter: Phaser.DOM.CENTER_BOTH,
+            width: w,
+            height: 600
+        },
+        backgroundColor: '#D7D7D7',
+        plugins: {
+            global: [{
+                key: 'GameScalePlugin',
+                plugin: Phaser.Plugins.GameScalePlugin,
+                mapping: 'gameScale',
+                data: {
+                    minWidth: 400,
+                    minHeight: 300,
+                    maxWidth: 1600,
+                    maxHeight: 1200,
+                    snap: 0
+                }
+            }]
+        },
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
+
+    function preload ()
+    {
+        this.load.image(o1.name, o1.img);
+    }
+
+    var game = new Phaser.Game(config);
+    var button;
+    function create ()
+    {
+
+//******************BEFORE TESTING, FIGURE OUT NAMING VS ITEM NAME (differ for filename and excel item)
+
+        var inst = this.add.text(w/2 - 85, 50, "Image testing", { font: "40px Arial", fill: "#000000"});
+        var image = this.add.image(400, 400, o1.name);
+        image.setDisplaySize(100,100);
+
+
+
+    }
+
+</script>
+</body>
+</html>
