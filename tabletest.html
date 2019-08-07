@@ -8,7 +8,7 @@
 
 
         var data = [
-        [localStorage["ID"], " "+localStorage["datetime"]+" ",localStorage["Menu"],''],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
+        [localStorage["ID"], " "+localStorage["datetimePre"]+" ",localStorage["Menu"],'','','','','',localStorage["datetimePost"]],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
         ['','','',localStorage["item0"],localStorage["color0"],Number(localStorage["itemPos0"])+1,localStorage["resp1"],localStorage["cresp1"]],
         ['','','',localStorage["item1"],localStorage["color1"],Number(localStorage["itemPos1"])+1,localStorage["resp2"],localStorage["cresp2"]],
         ['','','',localStorage["item2"],localStorage["color2"],Number(localStorage["itemPos2"])+1,localStorage["resp3"],localStorage["cresp3"]],
@@ -27,7 +27,7 @@
 
 
     function download_csv() {
-        var csv = 'ID,DateTime,MenuChoice,Item,Color,Location,ItemResponse,ColorResponse\n';
+        var csv = 'ID,DateTimePRE,MenuChoice,Item,Color,Location,ItemResponse,ColorResponse,DateTimePOST\n';
         data.forEach(function(row) {
             csv += row.join(',');
             csv += "\n";

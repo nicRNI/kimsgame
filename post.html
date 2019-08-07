@@ -130,6 +130,15 @@
                 //----------------------
             }
 
+            //Logs time of start of POST trial
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+            localStorage["datetimePost"] = dateTime;
+            console.log(dateTime);
+
+
             function formatTime(seconds){
                 // Minutes
                 var minutes = Math.floor(seconds/60);
