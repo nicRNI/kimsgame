@@ -3,17 +3,12 @@
 <script src="menuJS.js"></script>
 
 <script>
-    var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+' '+time;
-    console.log(dateTime);
 
 
 
 
-    var data = [
-        [localStorage["ID"], " "+dateTime+" ",localStorage["Menu"],''],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
+        var data = [
+        [localStorage["ID"], " "+localStorage["datetime"]+" ",localStorage["Menu"],''],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
         ['','','',localStorage["item0"],localStorage["color0"],Number(localStorage["itemPos0"])+1,localStorage["resp1"],localStorage["cresp1"]],
         ['','','',localStorage["item1"],localStorage["color1"],Number(localStorage["itemPos1"])+1,localStorage["resp2"],localStorage["cresp2"]],
         ['','','',localStorage["item2"],localStorage["color2"],Number(localStorage["itemPos2"])+1,localStorage["resp3"],localStorage["cresp3"]],
@@ -42,7 +37,7 @@
         var hiddenElement = document.createElement('a');
         hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
         hiddenElement.target = '_blank';
-        hiddenElement.download = localStorage["ID"]+'KIM.csv';
+        hiddenElement.download = localStorage["ID"]+localStorage["Menu"]+'KIM.csv';
         hiddenElement.click();
     }
 </script>

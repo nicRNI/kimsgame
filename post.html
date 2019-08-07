@@ -11,6 +11,7 @@
 
 <link href='poststyle.css' rel='stylesheet' type='text/css'>
 
+<form method="post" action="menupage.html">
     <div class="w3-container">
         <input id="in" type="text1" name="Item" value="Item name" onFocus="field_focus(this, 'Item name');" onblur="field_blur(this, 'Item name');"  class="ID" />
         <input id="in2" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID2" />
@@ -36,7 +37,9 @@
         <input id="in22" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID22" />
         <input id="in23" type="text1" name="Item" value="Item name" onFocus="field_focus(this, 'Item name');" onblur="field_blur(this, 'Item name');"  class="ID23" />
         <input id="in24" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID24" />
-        <input type="submit" value="Submit" onclick="get_info()" class="submit">
+        <input id="submit" type="submit" value="Submit" onclick="" class="submit">
+    </div>
+</form>
 
         <script type="text/javascript">
             //add submit all at the end, which sends data to the csv???
@@ -72,7 +75,8 @@
                 },
                 scene: {
                     preload: preload,
-                    create: create
+                    create: create,
+                    update: update
                 }
             };
             var game = new Phaser.Game(config);
@@ -145,6 +149,8 @@
                 if (this.initialTime == 0){
                     timetext.setText('GAMEOVER');
                     timedEvent.destroy();
+                    document.getElementById('submit').click(); //does this work?  //submit takes you to thank you page and sends data to server??(also need menu&index for server)
+                    console.log("got here");
 
                     //Call event that ends game
 
@@ -156,76 +162,68 @@
 //MAKE SUREEEEEEEEEEEEEEE IT SAVES/THEY CLICK TO SAVE ALL THE DATA
             function actionOnClick (game) {
                 document.getElementById("in").blur();
-                localStorage["resp1"] = document.getElementById("in").value;
                 //console.log(document.getElementById("in").value); //1 = top 2 = bottom 3= topright etc
-
                 document.getElementById("in2").blur();
+                document.getElementById("in3").blur();
+                document.getElementById("in4").blur();
+                document.getElementById("in5").blur();
+                document.getElementById("in6").blur();
+                document.getElementById("in7").blur();
+                document.getElementById("in8").blur();
+                document.getElementById("in9").blur();
+                document.getElementById("in10").blur();
+                document.getElementById("in11").blur();
+                document.getElementById("in12").blur();
+                document.getElementById("in13").blur();
+                document.getElementById("in14").blur();
+                document.getElementById("in15").blur();
+                document.getElementById("in16").blur();
+                document.getElementById("in17").blur();
+                document.getElementById("in18").blur();
+                document.getElementById("in19").blur();
+                document.getElementById("in20").blur();
+                document.getElementById("in21").blur();
+                document.getElementById("in22").blur();
+                document.getElementById("in23").blur();
+                document.getElementById("in24").blur();
+            }
+
+            function update()
+            {
+                localStorage["resp1"] = document.getElementById("in").value;
                 localStorage["cresp1"] = document.getElementById("in2").value;
 
-                document.getElementById("in3").blur();
                 localStorage["resp2"] = document.getElementById("in3").value;
-
-                document.getElementById("in4").blur();
                 localStorage["cresp2"] = document.getElementById("in4").value;
 
-                document.getElementById("in5").blur();
                 localStorage["resp3"] = document.getElementById("in5").value;
-
-                document.getElementById("in6").blur();
                 localStorage["cresp3"] = document.getElementById("in6").value;
 
-                document.getElementById("in7").blur();
                 localStorage["resp4"] = document.getElementById("in7").value;
-
-                document.getElementById("in8").blur();
                 localStorage["cresp4"] = document.getElementById("in8").value;
 
-                document.getElementById("in9").blur();
                 localStorage["resp5"] = document.getElementById("in9").value;
-
-                document.getElementById("in10").blur();
                 localStorage["cresp5"] = document.getElementById("in10").value;
 
-                document.getElementById("in11").blur();
                 localStorage["resp6"] = document.getElementById("in11").value;
-
-                document.getElementById("in12").blur();
                 localStorage["cresp6"] = document.getElementById("in12").value;
 
-                document.getElementById("in13").blur();
                 localStorage["resp7"] = document.getElementById("in13").value;
-
-                document.getElementById("in14").blur();
                 localStorage["cresp7"] = document.getElementById("in14").value;
 
-                document.getElementById("in15").blur();
                 localStorage["resp8"] = document.getElementById("in15").value;
-
-                document.getElementById("in16").blur();
                 localStorage["cresp8"] = document.getElementById("in16").value;
 
-                document.getElementById("in17").blur();
                 localStorage["resp9"] = document.getElementById("in17").value;
-
-                document.getElementById("in18").blur();
                 localStorage["cresp9"] = document.getElementById("in18").value;
 
-                document.getElementById("in19").blur();
                 localStorage["resp10"] = document.getElementById("in19").value;
-
-                document.getElementById("in20").blur();
                 localStorage["cresp10"] = document.getElementById("in20").value;
 
-                document.getElementById("in21").blur();
                 localStorage["resp11"] = document.getElementById("in21").value;
-
-                document.getElementById("in22").blur();
                 localStorage["cresp11"] = document.getElementById("in22").value;
 
-                document.getElementById("in23").blur();
                 localStorage["resp12"] = document.getElementById("in23").value;
-
-                document.getElementById("in24").blur();
                 localStorage["cresp12"] = document.getElementById("in24").value;
             }
         </script>

@@ -55,6 +55,10 @@
         this.load.image(o5.name, o5.img);
         this.load.image(o6.name, o6.img);
 
+        //CREATE NEW ATTRIBUTE ^^^ LIKE o1.objectname?? to allow objects names to be diff from fileee
+
+
+
 
         //make sure to update the 'hat' image name for each //also make sure image
 
@@ -164,7 +168,7 @@
         //console.log(imgArray[1]);
 
 
-        //timer-----------------
+        //2-minute timer-----------------
         this.initialTime = 120;
         //text for timer
         timetext = this.add.text(w*.63, 10, 'Time left: ' + formatTime(this.initialTime), {font: "25px Arial", fill: "#000000"});
@@ -173,7 +177,16 @@
         //----------------------
 
     }
-    
+
+    //Logs time of start of PRE trial
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    localStorage["datetime"] = dateTime;
+    console.log(dateTime);
+
+
 
     function formatTime(seconds){
         // Minutes

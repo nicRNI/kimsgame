@@ -52,6 +52,21 @@ function get_id(field, ID)
 
 }
 
+function doClick()
+{
+    if (localStorage['Menu'] == "OnPOST"){
+        window.location.href = "instructions2.html";
+    } else if (localStorage['Menu'] == "Event1POST"){
+        window.location.href = "instructions2.html";
+    } else if (localStorage['Menu'] == "Event7POST"){
+        window.location.href = "instructions2.html";
+    } else{
+        window.location.href = "instructions.html";
+    }
+}
+
+
+
 console.log(idnum, "works?");
 
 
