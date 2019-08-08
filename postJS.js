@@ -20,7 +20,10 @@ function field_blur(field, ID)
     console.log(field.value, "hi123");
 }
 
-
+function doHome() {
+    window.location.href = "imagetesting.html";
+    //change to answer/eval screen when made
+}
 
 //*******IF THEY RUN OUT OF TIME, MAKE IT AUTOMATICALLY SUBMIT, so that DATA is saved (maybe see how to press button w code?)
 
