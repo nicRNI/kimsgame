@@ -47,6 +47,7 @@
     var game = new Phaser.Game(config);
     function preload ()
     {
+        //forloop would have made sense but yeah
         this.load.image(o1.photo, o1.img);
         this.load.image(o2.photo, o2.img);
         this.load.image(o3.photo, o3.img);
@@ -165,16 +166,7 @@
         this.load.image(o116.photo,o116.img);
         this.load.image(o117.photo,o117.img);
         this.load.image(o118.photo,o118.img);
-        //CREATE NEW ATTRIBUTE ^^^ LIKE o1.objectname?? to allow objects names to be diff from fileee
-
-
-
-
-        //make sure to update the 'hat' image name for each //also make sure image
-
     }
-
-    var spriteSize = 32;
 
     var cellSize = 160;//135
     class grid {
@@ -187,10 +179,9 @@
                 for (j = 0; j < xPos.length; j++) {
                     var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
                     square.setStrokeStyle(3, 0x000000);
-                    //square.setInteractive(new Phaser.Geom.Rectangle(0, 0, 91, 91), Phaser.Geom.Rectangle.Contains);
                     square.setDepth(8);
                 }
-            }  //could make an array of square coords for pics?
+            }
         }
 
     }
@@ -202,38 +193,21 @@
         //set name of item in array to name of pic
         //returns itemList
         //ex... itemList[2] = 'hat1'
-        //make sure to set depth and size
-
-        //also could mark down the object.color and name in excel file
         for (i = 0; i < 12; i++)
-        {                                                //***NEED TO FIX THE BETWEEN #
+        {
             var img1 = Phaser.Math.Between(0, 117-i);
             console.log(img1, i);
             randArray[i] = imgArray[img1];
             imgArray.splice(img1, 1);
         }
-
-        // var img1 = Phaser.Math.Between(0, 99);
-        // randArray[0] = imgArray[img1];
-        // imgArray.splice(img1, 1);
-        //
-        // var img2 = Phaser.Math.Between(0, 98);
-        // randArray[1] = imgArray[img2];
-        // imgArray.splice(img2, 1);
-        //
-        // var img3 = Phaser.Math.Between(0, 97);
-        // randArray[2] = imgArray[img3];
-        // imgArray.splice(img3, 1);
-
     }
 
-
-    var group;
     var timetext;
     var timedEvent;
     function create ()
     {
         //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
+
         new grid(this);
         chooseItems();
 
@@ -251,32 +225,7 @@
             }
         }
 
-
-
-            // var hat = this.add.image(200,100, 'hat1');
-       // hat.setDepth(10);
-        //hat.setDisplaySize(100,100);
         //see this code to get random https://labs.phaser.io/edit.html?src=src\game%20objects\group\sprite%20pool.js
-
-
-        // group = this.make.group({
-        //     key: 'bobs',                          //FIGURE OUT HOW GROUPS WORK
-        //     frame: Phaser.Utils.Array.NumberArray(0, 399),
-        //     randomFrame: true,
-        //     max: 12,
-        //     gridAlign: {
-        //         x: ((w/2) - (1.75*cellSize) + (cellSize/2)),
-        //         y: ((h/2) - (1.75*cellSize) + (cellSize)),
-        //         width: 4,
-        //         height: 3,
-        //         cellWidth: 135,
-        //         cellHeight: 135
-        //     }
-        // });
-        // group.setDepth(9);
-
-        //console.log(imgArray[1]);
-
 
         //2-minute timer-----------------
         this.initialTime = 120;
@@ -295,8 +244,6 @@
     var dateTime = date+' '+time;
     localStorage["datetimePre"] = dateTime;
     console.log(dateTime);
-
-
 
     function formatTime(seconds){
         // Minutes

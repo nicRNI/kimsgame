@@ -11,7 +11,7 @@
 
 <link href='poststyle.css' rel='stylesheet' type='text/css'>
 
-<form method="post" action="menupage.html">
+<form method="post" action="">
     <div class="w3-container">
         <input id="in" type="text1" name="Item" value="Item name" onFocus="field_focus(this, 'Item name');" onblur="field_blur(this, 'Item name');"  class="ID" />
         <input id="in2" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID2" />
@@ -37,7 +37,7 @@
         <input id="in22" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID22" />
         <input id="in23" type="text1" name="Item" value="Item name" onFocus="field_focus(this, 'Item name');" onblur="field_blur(this, 'Item name');"  class="ID23" />
         <input id="in24" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID24" />
-        <input id="submit" type="submit" value="Submit" onclick="" class="submit">
+        <input id="submit" type="submit" value="Submit" onclick="return doHome(); return false;" class="submit">
     </div>
 </form>
 
@@ -96,15 +96,18 @@
                         for (j = 0; j < xPos.length; j++) {
                             var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
                             square.setStrokeStyle(3, 0x000000);
-                            //square.setInteractive(new Phaser.Geom.Rectangle(0, 0, 91, 91), Phaser.Geom.Rectangle.Contains);
                             square.setDepth(8);
                         }
-                    }  //could make an array of square coords for pics?
+                    }
                 }
 
             }
 
 
+            function doHome() {
+                window.location.href = "menupage.html";
+                //change to answer/eval screen when made
+            }
 
 
             var group;
@@ -112,14 +115,9 @@
             var timedEvent;
             function create ()
             {
-                //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
                 new grid(this);
 
                 var inst = this.add.text(330, 2, "Click on spaces on the grid to enter or edit your KIMs Game responses:", { font: "18px Arial", fill: "#000000"});
-
-
-
-
 
                 //timer-----------------
                 this.initialTime = 300;
@@ -168,10 +166,8 @@
                     timetext.setText('Time left: ' + formatTime(this.initialTime));
                 }
             }
-//MAKE SUREEEEEEEEEEEEEEE IT SAVES/THEY CLICK TO SAVE ALL THE DATA
             function actionOnClick (game) {
                 document.getElementById("in").blur();
-                //console.log(document.getElementById("in").value); //1 = top 2 = bottom 3= topright etc
                 document.getElementById("in2").blur();
                 document.getElementById("in3").blur();
                 document.getElementById("in4").blur();
@@ -197,7 +193,7 @@
                 document.getElementById("in24").blur();
             }
 
-            function update()
+            function update()//see if actiononclick specific object brings up input? (or other options)
             {
                 localStorage["resp1"] = document.getElementById("in").value;
                 localStorage["cresp1"] = document.getElementById("in2").value;
@@ -239,8 +235,6 @@
     </div>
 
 </head>
-
-
 
 </body>
 </html>

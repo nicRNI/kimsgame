@@ -12,6 +12,7 @@
 <body>
 <script type="text/javascript">
     var w = 1250;
+    var h = 600;
     var config = {
         type: Phaser.WEBGL,
         scale: {
@@ -42,9 +43,34 @@
         }
     };
 
+
+
+
+
+
+
+
+
+
+
     //----------------
     var testsub = o118;
     //----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     function preload ()
     {
         this.load.image(testsub.photo, testsub.img);
@@ -53,26 +79,61 @@
 
     }
 
+
+    var cellSize = 160;
+    class grid {
+        constructor(scene) {
+            var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
+            var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
+            var i;
+            var j;
+            for (i = 0; i < yPos.length; i++) {
+                for (j = 0; j < xPos.length; j++) {
+                    var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
+                    square.setStrokeStyle(3, 0x000000);
+                    //square.setInteractive(new Phaser.Geom.Rectangle(0, 0, 91, 91), Phaser.Geom.Rectangle.Contains);
+                    square.setDepth(8);
+                }
+            }  //could make an array of square coords for pics?
+        }
+
+    }
+
     var game = new Phaser.Game(config);
     function create ()
     {
         var inst = this.add.text(w/2 - 85, 50, "Image testing", { font: "40px Arial", fill: "#000000"});
 
-        var image = this.add.image(400, 200, testsub.photo);
+        new grid(this);
+        var image = this.add.image(390, 150, testsub.photo);
         image.setDisplaySize(100,100);
+        image.setDepth(10);
         //image.setScale(0.1);
 
         var image2 = this.add.image(200, 200, o4.photo);
         image2.setDisplaySize(100,100);
 
-        var m = 0;
-        var turtle = [];
-        for (i = 13; i < 119; i++) {
-            turtle[m] = "this.load.image(o"+i+".photo,"+i+"o.img);\n";
-            console.log("this.load.image(o"+i+".photo,o"+i+".img);");
-            m++;
+
+        for (p = 0; p < 3; p++) {
+            for (q = 0; q < 4; q++) {
+                if (q == 0 && p == 0){
+                    continue;
+                }
+                var image3 = this.add.image(390+(160*q), 150+160*p, o4.photo);
+                image3.setDisplaySize(100,100);
+                image3.setDepth(9);
+
+            }
         }
-        console.log(turtle);
+
+        // var m = 0;
+        // var turtle = [];
+        // for (i = 13; i < 119; i++) {
+        //     turtle[m] = "this.load.image(o"+i+".photo,"+i+"o.img);\n";
+        //     console.log("this.load.image(o"+i+".photo,o"+i+".img);");
+        //     m++;
+        // }
+        // console.log(turtle);
     }
 
 </script>
