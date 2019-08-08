@@ -42,24 +42,37 @@
         }
     };
 
+    //----------------
+    var testsub = o118;
+    //----------------
     function preload ()
     {
-        this.load.image(o1.name, o1.img);
+        this.load.image(testsub.photo, testsub.img);
+
+        this.load.image(o4.photo, o4.img);
+
     }
 
     var game = new Phaser.Game(config);
-    var button;
     function create ()
     {
-
-//******************BEFORE TESTING, FIGURE OUT NAMING VS ITEM NAME (differ for filename and excel item)
-
         var inst = this.add.text(w/2 - 85, 50, "Image testing", { font: "40px Arial", fill: "#000000"});
-        var image = this.add.image(400, 400, o1.name);
+
+        var image = this.add.image(400, 200, testsub.photo);
         image.setDisplaySize(100,100);
+        //image.setScale(0.1);
 
+        var image2 = this.add.image(200, 200, o4.photo);
+        image2.setDisplaySize(100,100);
 
-
+        var m = 0;
+        var turtle = [];
+        for (i = 13; i < 119; i++) {
+            turtle[m] = "this.load.image(o"+i+".photo,"+i+"o.img);\n";
+            console.log("this.load.image(o"+i+".photo,o"+i+".img);");
+            m++;
+        }
+        console.log(turtle);
     }
 
 </script>
