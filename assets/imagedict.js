@@ -220,10 +220,10 @@ const o31 = {
 };
 
 const o32 = {
-    img: 'assets/images/brownbroom.png',
-    name: 'broom',
-    color: 'brown',
-    photo: 'broom1'
+    img: 'assets/images/bluepencil.png',
+    name: 'pencil',
+    color: 'blue',
+    photo: 'pencilb9'
 };
 
 const o33 = {
@@ -430,10 +430,10 @@ const o61 = {
 };
 
 const o62 = {
-    img: 'assets/images/orangehairbrush.png',
-    name: 'hairbrush',
-    color: 'orange',
-    photo: 'hairbrusho1'
+    img: 'assets/images/yellowhat.png',
+    name: 'hat',
+    color: 'yellow',
+    photo: 'haty9'
 };
 
 const o63 = {
