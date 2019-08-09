@@ -66,10 +66,10 @@ const o9 = {
 };
 
 const o10 = {
-    img: 'assets/images/blacknotebook.png',
-    name: 'notebook',
-    color: 'black',
-    photo: 'notebook1'
+    img: 'assets/images/brownfootball.png',
+    name: 'football',
+    color: 'brown',
+    photo: 'football1'
 };
 
 const o11 = {
@@ -150,17 +150,17 @@ const o21 = {
 };
 
 const o22 = {
-    img: 'assets/images/bluenecklace.png',
-    name: 'necklace',
-    color: 'blue',
-    photo: 'necklace1'
+    img: 'assets/images/greenapple.png',
+    name: 'apple',
+    color: 'green',
+    photo: 'appleg1'
 };
 
 const o23 = {
-    img: 'assets/images/bluenotebook.png',
-    name: 'notebook',
-    color: 'blue',
-    photo: 'notebook2'
+    img: 'assets/images/redapple.png',
+    name: 'apple',
+    color: 'red',
+    photo: 'appler2'
 };
 
 const o24 = {
@@ -171,10 +171,10 @@ const o24 = {
 };
 
 const o25 = {
-    img: 'assets/images/bluescarf.png',
-    name: 'scarf',
-    color: 'blue',
-    photo: 'scarf1'
+    img: 'assets/images/greenbowtie.png',
+    name: 'bowtie',
+    color: 'green',
+    photo: 'bowtieg1'
 };
 
 const o26 = {
@@ -472,17 +472,17 @@ const o67 = {
 };
 
 const o68 = {
-    img: 'assets/images/pinknotebook.png',
-    name: 'notebook',
-    color: 'pink',
-    photo: 'notebookp3'
+    img: 'assets/images/yellowflower.png',
+    name: 'flower',
+    color: 'yellow',
+    photo: 'flowery9'
 };
 
 const o69 = {
-    img: 'assets/images/pinkscarf.png',
-    name: 'scarf',
-    color: 'pink',
-    photo: 'scarfp4'
+    img: 'assets/images/redsuitcase.png',
+    name: 'suitcase',
+    color: 'red',
+    photo: 'suitcaser9'
 };
 
 const o70 = {
@@ -533,10 +533,10 @@ const o76 = {
     photo: 'chairp2'
 };
 const o77 = {
-    img: 'assets/images/purplecomb.png',
-    name: 'comb',
-    color: 'purple',
-    photo: 'combp1'
+    img: 'assets/images/bluefish.png',
+    name: 'fish',
+    color: 'blue',
+    photo: 'fishb9'
 };
 const o78 = {
     img: 'assets/images/purpleflower.png',
@@ -584,10 +584,10 @@ const o84 = {
 };
 
 const o85 = {
-    img: 'assets/images/redcup.png',
-    name: 'cup',
+    img: 'assets/images/redfish.png',
+    name: 'fish',
     color: 'red',
-    photo: 'cupr1'
+    photo: 'fishr9'
 };
 
 const o86 = {
@@ -619,10 +619,10 @@ const o89 = {
 };
 
 const o90 = {
-    img: 'assets/images/redmug.png',
-    name: 'mug',
+    img: 'assets/images/redshoes.png',
+    name: 'shoes',
     color: 'red',
-    photo: 'mugr3'
+    photo: 'shoesr9'
 };
 
 const o91 = {
@@ -691,10 +691,10 @@ const o99 = {
 };
 
 const o100 = {
-    img: 'assets/images/whitehat.png',
-    name: 'hat',
-    color: 'white',
-    photo: 'hatw5'
+    img: 'assets/images/purpleshirt.png',
+    name: 'shirt',
+    color: 'purple',
+    photo: 'shirtp9'
 };
 
 const o101 = {
@@ -712,17 +712,17 @@ const o102 = {
 };
 
 const o103 = {
-    img: 'assets/images/whiteplate.png',
-    name: 'plate',
-    color: 'white',
-    photo: 'platew1'
+    img: 'assets/images/blueshirt.png',
+    name: 'shirt',
+    color: 'blue',
+    photo: 'shirtb9'
 };
 
 const o104 = {
-    img: 'assets/images/whitesoap.png',
-    name: 'soap',
-    color: 'white',
-    photo: 'soapw1'
+    img: 'assets/images/greendress.png',
+    name: 'dress',
+    color: 'green',
+    photo: 'dressg9'
 };
 
 const o105 = {
@@ -782,10 +782,10 @@ const o112 = {
 };
 
 const o113 = {
-    img: 'assets/images/yellownotebook.png',
-    name: 'notebook',
-    color: 'yellow',
-    photo: 'notebooky3'
+    img: 'assets/images/greenmug.png',
+    name: 'mug',
+    color: 'green',
+    photo: 'mugg9'
 };
 
 const o114 = {

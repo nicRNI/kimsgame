@@ -37,7 +37,7 @@
         <input id="in22" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID22" />
         <input id="in23" type="text1" name="Item" value="Item name" onFocus="field_focus(this, 'Item name');" onblur="field_blur(this, 'Item name');"  class="ID23" />
         <input id="in24" type="text1" name="Color" value="Item color" onFocus="field_focus(this, 'Item color');" onblur="field_blur(this, 'Item color');"  class="ID24" />
-        <a onclick="return doHome(); return false"><div class="btn">Submit</div></a> <!-- End Btn -->
+        <a onclick="return doHome(); return false "><div class="btn">Submit</div></a> <!-- End Btn -->
 
     </div>
 </form>
@@ -48,10 +48,12 @@
             window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
 
 
-
+//
 
             function doHome() {
-                window.location.href = "menupage.html";
+                if(confirm('Are you sure?')){
+                    window.location.href = "menupage.html";
+                }
                 //change to answer/eval screen when made
             }
 
