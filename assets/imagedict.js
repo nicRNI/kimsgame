@@ -3,7 +3,7 @@ const o1 = {
     name: 'banana',
     color: 'blue',
     photo: 'banana',
-    correctname: ['banana'],
+    correctname: ['banana'], //leave all uncapitalized, no spaces, (add plurals??), add misspellings?
     correctcolor: []
 };
 

@@ -75,12 +75,12 @@
             for(b=0; b<12; b++)
             {
                 //look for item name in storage, and item correct...
-                if(localStorage["item"+b].correctname.includes(localStorage["resp"+b]))
+                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+b].correctname.includes(localStorage["resp"+b]))
                 {
                     nameCheck[b] = true;
                 }
 
-                if(localStorage["color"+b].correctcolor.includes(localStorage["cresp"+b]))
+                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+b].correctcolor.includes(localStorage["cresp"+b]))
                 {
                     colorCheck[b] = true;
                 }
@@ -93,14 +93,26 @@
             new grid(this);
             var inst = this.add.text(305, 20, "Correct answers and your responses:", { font: "18px Arial", fill: "#000000"});
 
-            //scoring();
+
+
+            //need better fix for menu choice (instead maybe just save event # in excel)!!!!!
+            if (localStorage['Menu'] == "OnPOST"){
+                localStorage['Menu'] = "OnPRE";
+            } else if (localStorage['Menu'] == "Event1POST"){
+                localStorage['Menu'] = "Event1PRE";
+
+            } else if (localStorage['Menu'] == "Event7POST"){
+                localStorage['Menu'] = "Event7PRE";
+            }
+
+            //scoring(); //once scoring is ready, delete falses
 
             var correct = 0;
             var xi = 0;
             for (p = 0; p < 3; p++) {
                 for (q = 0; q < 4; q++) {
                     if(nameCheck[xi]){
-                        var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage["item"+xi], { font: "12px Arial", fill: "#000000"});
+                        var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+xi], { font: "12px Arial", fill: "#000000"});
                         scr.setDepth(10);
 
                         //NEED TO FIX LOCAL STORAGE NAMES && SCORING SO THAT IT MATCHES USERID NOT MOST RECENT
@@ -114,7 +126,7 @@
                         correct++;
 
                     } else if(!nameCheck[xi]){
-                        var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage["item"+xi], { font: "12px Arial", fill: "#000000"});
+                        var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+xi], { font: "12px Arial", fill: "#000000"});
                         scr.setDepth(10);
 
                         //NEED TO FIX LOCAL STORAGE NAMES && SCORING SO THAT IT MATCHES USERID NOT MOST RECENT
@@ -127,7 +139,7 @@
                     }
 
                     if(colorCheck[xi]){
-                        var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage["color"+xi], { font: "12px Arial", fill: "#000000"});
+                        var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+xi], { font: "12px Arial", fill: "#000000"});
                         scr4.setDepth(10);
 
                         var scr5 = this.add.text(310+(160*q), 170+160*p, "Your response: "+localStorage["cresp"+(xi+1)], { font: "12px Arial", fill: "#000000"});
@@ -139,7 +151,7 @@
                         correct++;
 
                     } else if(!colorCheck[xi]){
-                        var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage["color"+xi], { font: "12px Arial", fill: "#000000"});
+                        var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+xi], { font: "12px Arial", fill: "#000000"});
                         scr4.setDepth(10);
 
                         var scr5 = this.add.text(310+(160*q), 170+160*p, "Your response: "+localStorage["cresp"+(xi+1)], { font: "12px Arial", fill: "#000000"});
