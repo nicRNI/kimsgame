@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<meta name="apple-mobile-web-app-capable"
+      content="yes" />
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+    <script src="dist/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
+    <script src="assets/imagedict.js"></script>
+
+
+</head>
+<link href='kimstyle.css' rel='stylesheet' type='text/css'>
+
+<body>
+<script type="text/javascript">
+    var w = 1250;
+    var h = 600;
+    var config = {
+        type: Phaser.WEBGL,
+        scale: {
+            parent: 'gameWrapper',
+            mode: Phaser.DOM.FIT,
+            autoCenter: Phaser.DOM.CENTER_BOTH,
+            width: w,
+            height: h
+        },
+        backgroundColor: '#D7D7D7',
+        plugins: {
+            global: [{
+                key: 'GameScalePlugin',
+                plugin: Phaser.Plugins.GameScalePlugin,
+                mapping: 'gameScale',
+                data: {
+                    minWidth: 400,
+                    minHeight: 300,
+                    maxWidth: 1600,
+                    maxHeight: 1200,
+                    snap: 0
+                }
+            }]
+        },
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
+    var game = new Phaser.Game(config);
+    var randArray = [];
+
+    function preload ()
+    {
+        function chooseItems()
+        {//randomly selects 12 of the 100 images
+            // assigns them into an array. (then in create function, loop thru array.)
+            //set name of item in array to name of pic
+            //returns itemList
+            //ex... itemList[2] = 'hat1'
+            for (i = 0; i < 12; i++)
+            {
+                var img1 = Phaser.Math.Between(0, 117-i);
+                console.log(img1, i);
+                randArray[i] = imgArray[img1];
+                imgArray.splice(img1, 1);
+            }
+        }
+
+        chooseItems();
+        var loadtxt = this.add.text(w/2 - 88, h/4, "Loading...", { font: "40px Arial", fill: "#000000"});
+        //console.log(loadtxt.width); = 176 (176/2 = 88)
+        //forloop would have made sense but yeah
+        var l;
+        for(l=0; l<12; l++)
+        {
+            this.load.image(randArray[l].photo, randArray[l].img);
+        }
+
+        // this.load.image(o1.photo, o1.img);
+        // this.load.image(o2.photo, o2.img);
+        // this.load.image(o3.photo, o3.img);
+        // this.load.image(o4.photo, o4.img);
+        // this.load.image(o5.photo, o5.img);
+        // this.load.image(o6.photo, o6.img);
+        // this.load.image(o7.photo, o7.img);
+        // this.load.image(o8.photo, o8.img);
+        // this.load.image(o9.photo, o9.img);
+        // this.load.image(o10.photo, o10.img);
+        // this.load.image(o11.photo, o11.img);
+        // this.load.image(o12.photo, o12.img);
+        // this.load.image(o13.photo,o13.img);
+        // this.load.image(o14.photo,o14.img);
+        // this.load.image(o15.photo,o15.img);
+        // this.load.image(o16.photo,o16.img);
+        // this.load.image(o17.photo,o17.img);
+        // this.load.image(o18.photo,o18.img);
+        // this.load.image(o19.photo,o19.img);
+        // this.load.image(o20.photo,o20.img);
+        // this.load.image(o21.photo,o21.img);
+        // this.load.image(o22.photo,o22.img);
+        // this.load.image(o23.photo,o23.img);
+        // this.load.image(o24.photo,o24.img);
+        // this.load.image(o25.photo,o25.img);
+        // this.load.image(o26.photo,o26.img);
+        // this.load.image(o27.photo,o27.img);
+        // this.load.image(o28.photo,o28.img);
+        // this.load.image(o29.photo,o29.img);
+        // this.load.image(o30.photo,o30.img);
+        // this.load.image(o31.photo,o31.img);
+        // this.load.image(o32.photo,o32.img);
+        // this.load.image(o33.photo,o33.img);
+        // this.load.image(o34.photo,o34.img);
+        // this.load.image(o35.photo,o35.img);
+        // this.load.image(o36.photo,o36.img);
+        // this.load.image(o37.photo,o37.img);
+        // this.load.image(o38.photo,o38.img);
+        // this.load.image(o39.photo,o39.img);
+        // this.load.image(o40.photo,o40.img);
+        // this.load.image(o41.photo,o41.img);
+        // this.load.image(o42.photo,o42.img);
+        // this.load.image(o43.photo,o43.img);
+        // this.load.image(o44.photo,o44.img);
+        // this.load.image(o45.photo,o45.img);
+        // this.load.image(o46.photo,o46.img);
+        // this.load.image(o47.photo,o47.img);
+        // this.load.image(o48.photo,o48.img);
+        // this.load.image(o49.photo,o49.img);
+        // this.load.image(o50.photo,o50.img);
+        // this.load.image(o51.photo,o51.img);
+        // this.load.image(o52.photo,o52.img);
+        // this.load.image(o53.photo,o53.img);
+        // this.load.image(o54.photo,o54.img);
+        // this.load.image(o55.photo,o55.img);
+        // this.load.image(o56.photo,o56.img);
+        // this.load.image(o57.photo,o57.img);
+        // this.load.image(o58.photo,o58.img);
+        // this.load.image(o59.photo,o59.img);
+        // this.load.image(o60.photo,o60.img);
+        // this.load.image(o61.photo,o61.img);
+        // this.load.image(o62.photo,o62.img);
+        // this.load.image(o63.photo,o63.img);
+        // this.load.image(o64.photo,o64.img);
+        // this.load.image(o65.photo,o65.img);
+        // this.load.image(o66.photo,o66.img);
+        // this.load.image(o67.photo,o67.img);
+        // this.load.image(o68.photo,o68.img);
+        // this.load.image(o69.photo,o69.img);
+        // this.load.image(o70.photo,o70.img);
+        // this.load.image(o71.photo,o71.img);
+        // this.load.image(o72.photo,o72.img);
+        // this.load.image(o73.photo,o73.img);
+        // this.load.image(o74.photo,o74.img);
+        // this.load.image(o75.photo,o75.img);
+        // this.load.image(o76.photo,o76.img);
+        // this.load.image(o77.photo,o77.img);
+        // this.load.image(o78.photo,o78.img);
+        // this.load.image(o79.photo,o79.img);
+        // this.load.image(o80.photo,o80.img);
+        // this.load.image(o81.photo,o81.img);
+        // this.load.image(o82.photo,o82.img);
+        // this.load.image(o83.photo,o83.img);
+        // this.load.image(o84.photo,o84.img);
+        // this.load.image(o85.photo,o85.img);
+        // this.load.image(o86.photo,o86.img);
+        // this.load.image(o87.photo,o87.img);
+        // this.load.image(o88.photo,o88.img);
+        // this.load.image(o89.photo,o89.img);
+        // this.load.image(o90.photo,o90.img);
+        // this.load.image(o91.photo,o91.img);
+        // this.load.image(o92.photo,o92.img);
+        // this.load.image(o93.photo,o93.img);
+        // this.load.image(o94.photo,o94.img);
+        // this.load.image(o95.photo,o95.img);
+        // this.load.image(o96.photo,o96.img);
+        // this.load.image(o97.photo,o97.img);
+        // this.load.image(o98.photo,o98.img);
+        // this.load.image(o99.photo,o99.img);
+        // this.load.image(o100.photo,o100.img);
+        // this.load.image(o101.photo,o101.img);
+        // this.load.image(o102.photo,o102.img);
+        // this.load.image(o103.photo,o103.img);
+        // this.load.image(o104.photo,o104.img);
+        // this.load.image(o105.photo,o105.img);
+        // this.load.image(o106.photo,o106.img);
+        // this.load.image(o107.photo,o107.img);
+        // this.load.image(o108.photo,o108.img);
+        // this.load.image(o109.photo,o109.img);
+        // this.load.image(o110.photo,o110.img);
+        // this.load.image(o111.photo,o111.img);
+        // this.load.image(o112.photo,o112.img);
+        // this.load.image(o113.photo,o113.img);
+        // this.load.image(o114.photo,o114.img);
+        // this.load.image(o115.photo,o115.img);
+        // this.load.image(o116.photo,o116.img);
+        // this.load.image(o117.photo,o117.img);
+        // this.load.image(o118.photo,o118.img);
+        this.load.on('complete', function () {
+            loadtxt.destroy();
+        })
+    }
+
+    var cellSize = 160;//135
+    class grid {
+        constructor(scene) {
+            var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
+            var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
+            var i;
+            var j;
+            for (i = 0; i < yPos.length; i++) {
+                for (j = 0; j < xPos.length; j++) {
+                    var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
+                    square.setStrokeStyle(3, 0x000000);
+                    square.setDepth(8);
+                }
+            }
+        }
+
+    }
+
+
+
+    var timetext;
+    var timedEvent;
+    function create ()
+    {
+        //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
+
+        new grid(this);
+        //chooseItems();
+
+        var xi = 0;
+        for (p = 0; p < 3; p++) {
+            for (q = 0; q < 4; q++) {
+                localStorage["item"+xi] = randArray[xi].name;
+                localStorage["itemPos"+xi] = xi;
+                localStorage["color"+xi] = randArray[xi].color;
+
+                var image = this.add.image(390+(160*q), 150+160*p, randArray[xi].photo);
+                image.setDisplaySize(100,100);
+                image.setDepth(10);
+                xi++;
+            }
+        }
+
+        //see this code to get random https://labs.phaser.io/edit.html?src=src\game%20objects\group\sprite%20pool.js
+
+        //2-minute timer-----------------
+        this.initialTime = 120;
+        //text for timer
+        timetext = this.add.text(w*.63, 10, 'Time left: ' + formatTime(this.initialTime), {font: "25px Arial", fill: "#000000"});
+        // Each 1000 ms call onEvent
+        timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
+        //----------------------
+
+    }
+
+    //Logs time of start of PRE trial
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    localStorage["datetimePre"] = dateTime;
+    console.log(dateTime);
+
+
+
+    function formatTime(seconds){
+        // Minutes
+        var minutes = Math.floor(seconds/60);
+        // Seconds
+        var partInSeconds = seconds%60;
+        // Adds left zeros to seconds
+        partInSeconds = partInSeconds.toString().padStart(2,'0');
+        // Returns formated time
+        return `${minutes}:${partInSeconds}`;
+    }
+
+    function onEvent ()
+    {
+        this.initialTime -= 1; // One second
+        if (this.initialTime == 0){
+            timetext.setText('GAMEOVER');
+            timedEvent.destroy();
+            window.location.href = "menupage.html"
+            //Call event that ends game
+
+        }
+        else{
+            timetext.setText('Time left: ' + formatTime(this.initialTime));
+        }
+    }
+</script>
+</body>
+</html>
