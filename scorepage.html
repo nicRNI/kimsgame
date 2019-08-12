@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<meta name="apple-mobile-web-app-capable"
+      content="yes" />
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.19.0/phaser.js"></script>
+    <script src="assets/imagedict.js"></script>
+
+    <link href='kimstyle.css' rel='stylesheet' type='text/css'>
+
+
+
+    <script type="text/javascript">
+
+
+
+
+        var w = 1250;
+        var h = 600;
+        var config = {
+            type: Phaser.WEBGL,
+            scale: {
+                parent: 'gameWrapper',
+                width: w,
+                height: h,
+            },
+            dom: {
+                createContainer: true
+            },
+            backgroundColor: '#D7D7D7',
+            plugins: {
+                global: [{
+
+                }]
+            },
+            scene: {
+                preload: preload,
+                create: create
+            }
+        };
+        var game = new Phaser.Game(config);
+
+        function preload ()
+        {
+        }
+
+        var cellSize = 160;//135
+        class grid {
+            constructor(scene) {
+                var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
+                var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
+                var i;
+                var j;
+                for (i = 0; i < yPos.length; i++) {
+                    for (j = 0; j < xPos.length; j++) {
+                        var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
+                        square.setStrokeStyle(3, 0x000000);
+                        square.setDepth(8);
+                    }
+                }
+            }
+
+        }
+
+
+        //get rid of plurals and capitalization***
+        var nameCheck = [false,false,true,false,false,false,false,false,false,false,false,false];;//fixxxxxxxxxxxxxxx after testing (get rid of falses)
+        var colorCheck = [false,false,true,false,false,false,false,false,false,false,false,false];;
+        function scoring()
+        {//use for loop
+            nameCheck = [false,false,false,false,false,false,false,false,false,false,false,false];
+            colorCheck = [false,false,false,false,false,false,false,false,false,false,false,false];
+
+            var b;
+            for(b=0; b<12; b++)
+            {
+                //look for item name in storage, and item correct...
+                if(localStorage["item"+b].correctname.includes(localStorage["resp"+b]))
+                {
+                    nameCheck[b] = true;
+                }
+
+                if(localStorage["color"+b].correctcolor.includes(localStorage["cresp"+b]))
+                {
+                    colorCheck[b] = true;
+                }
+            }
+        }
+
+
+        function create ()
+        {
+            new grid(this);
+            var inst = this.add.text(305, 20, "Correct answers and your responses:", { font: "18px Arial", fill: "#000000"});
+
+            //scoring();
+
+            var correct = 0;
+            var xi = 0;
+            for (p = 0; p < 3; p++) {
+                for (q = 0; q < 4; q++) {
+                    if(nameCheck[xi]){
+                        var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage["item"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr.setDepth(10);
+
+                        //NEED TO FIX LOCAL STORAGE NAMES && SCORING SO THAT IT MATCHES USERID NOT MOST RECENT
+
+                        var scr2 = this.add.text(310+(160*q), 90+160*p, "Your response: "+localStorage["resp"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr2.setDepth(10);
+
+                        var scr3 = this.add.text(310+(160*q), 110+160*p, "               Correct", { font: "12px Arial", fill: "#008000"});
+                        scr3.setDepth(10);
+
+                        correct++;
+
+                    } else if(!nameCheck[xi]){
+                        var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage["item"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr.setDepth(10);
+
+                        //NEED TO FIX LOCAL STORAGE NAMES && SCORING SO THAT IT MATCHES USERID NOT MOST RECENT
+
+                        var scr2 = this.add.text(310+(160*q), 90+160*p, "Your response: "+localStorage["resp"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr2.setDepth(10);
+
+                        var scr3 = this.add.text(310+(160*q), 110+160*p, "               Incorrect", { font: "12px Arial", fill: "#ff0000"});
+                        scr3.setDepth(10);
+                    }
+
+                    if(colorCheck[xi]){
+                        var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage["color"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr4.setDepth(10);
+
+                        var scr5 = this.add.text(310+(160*q), 170+160*p, "Your response: "+localStorage["cresp"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr5.setDepth(10);
+
+                        var scr6 = this.add.text(310+(160*q), 190+160*p, "               Correct", { font: "12px Arial", fill: "#008000"});
+                        scr6.setDepth(10);
+
+                        correct++;
+
+                    } else if(!colorCheck[xi]){
+                        var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage["color"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr4.setDepth(10);
+
+                        var scr5 = this.add.text(310+(160*q), 170+160*p, "Your response: "+localStorage["cresp"+xi], { font: "12px Arial", fill: "#000000"});
+                        scr5.setDepth(10);
+
+                        var scr6 = this.add.text(310+(160*q), 190+160*p, "               Incorrect", { font: "12px Arial", fill: "#ff0000"});
+                        scr6.setDepth(10);
+                    }
+                    xi++;
+                }
+            }
+
+            var cor = this.add.text(w/2 - 92, h-40, correct+" /24 correct responses", { font: "18px Arial", fill: "#000000"});
+            cor.setDepth(10);
+        }
+
+
+    </script>
+    </div>
+
+</head>
+
+</body>
+</html>

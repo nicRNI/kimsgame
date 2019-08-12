@@ -23,16 +23,11 @@
 
         function doHome() {
             if(confirm('Are you sure?')){
-                window.location.href = "menupage.html";
+                window.location.href = "scorepage.html";
             }
             //change to answer/eval screen when made
         }
 
-
-
-
-
-        //        <input id="submit" type="submit" value="Submit" onclick="return doHome(); return false;" class="submit">
 
         var w = 1250;
         var h = 600;
@@ -42,9 +37,6 @@
                 parent: 'gameWrapper',
                 width: w,
                 height: h,
-                canvas:{
-                    touchAction:'auto'
-                }
             },
             dom: {
                 createContainer: true
@@ -93,8 +85,6 @@
         var timedEvent;
         function create ()
         {
-
-            this.setInteractive;
             new grid(this);
 
             var element = this.add.dom(-215, -100).createFromCache('nameform');

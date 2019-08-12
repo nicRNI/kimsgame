@@ -18,6 +18,10 @@ select.forEach(function(e) {
     });
 });
 
+//^^^ maybe start localStorage menu at pre each time go to here?
+
+
+
 //****************************USE localStorage example above to help direct to proper instructions page
 //then have each instructions page direct to the right gamemode (pre/post)
 

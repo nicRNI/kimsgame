@@ -2,7 +2,9 @@ const o1 = {
     img: 'assets/images/blackballoon.png',
     name: 'balloon',
     color: 'black',
-    photo: 'balloon1'
+    photo: 'balloon1',
+    correctname: [],
+    correctcolor: []
 };
 
 //make sure to 1. test file in imagetesting... 2. update in index preload... 3. update image array at bottom
@@ -13,644 +15,830 @@ const o2 = {
     img: 'assets/images/blackboots.png',
     name: 'boots',
     color: 'black',
-    photo: 'boots1'
+    photo: 'boots1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o3 = {
     img: 'assets/images/blackcat.png',
     name: 'cat',
     color: 'black',
-    photo: 'cat1'
+    photo: 'cat1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o4 = {
     img: 'assets/images/banana.png',
     name: 'banana',
     color: 'blue',
-    photo: 'banana'
+    photo: 'banana',
+    correctname: ['banana'],
+    correctcolor: []
 };
 
 const o5 = {
     img: 'assets/images/blackdog.png',
     name: 'dog',
     color: 'black',
-    photo: 'dog1'
+    photo: 'dog1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o6 = {
     img: 'assets/images/blackdress.png',
     name: 'dress',
     color: 'black',
-    photo: 'dress1'
+    photo: 'dress1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o7 = {
     img: 'assets/images/blackfork.png',
     name: 'fork',
     color: 'black',
-    photo: 'fork1'
+    photo: 'fork1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o8 = {
     img: 'assets/images/blackglasses.png',
     name: 'glasses',
     color: 'black',
-    photo: 'glasses1'
+    photo: 'glasses1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o9 = {
     img: 'assets/images/blackglove.png',
     name: 'glove',
     color: 'black',
-    photo: 'glove1'
+    photo: 'glove1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o10 = {
     img: 'assets/images/brownfootball.png',
     name: 'football',
     color: 'brown',
-    photo: 'football1'
+    photo: 'football1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o11 = {
     img: 'assets/images/blackpants.png',
     name: 'pants',
     color: 'black',
-    photo: 'pants1'
+    photo: 'pants1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o12 = {
     img: 'assets/images/blackphone.png',
     name: 'phone',
     color: 'black',
-    photo: 'phone1'
+    photo: 'phone1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o13 = {
     img: 'assets/images/blackspatula.png',
     name: 'spatula',
     color: 'black',
-    photo: 'spatula1'
+    photo: 'spatula1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o14 = {
     img: 'assets/images/bluebackpack.png',
     name: 'backpack',
     color: 'blue',
-    photo: 'backpack1'
+    photo: 'backpack1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o15 = {
     img: 'assets/images/bluebird.png',
     name: 'bird',
     color: 'blue',
-    photo: 'bird1'
+    photo: 'bird1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o16 = {
     img: 'assets/images/bluebowtie.png',
     name: 'bowtie',
     color: 'blue',
-    photo: 'bowtie1'
+    photo: 'bowtie1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o17 = {
     img: 'assets/images/bluedress.png',
     name: 'dress',
     color: 'blue',
-    photo: 'dress2'
+    photo: 'dress2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o18 = {
     img: 'assets/images/bluefrog.png',
     name: 'frog',
     color: 'blue',
-    photo: 'frog1'
+    photo: 'frog1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o19 = {
     img: 'assets/images/bluegloves.png',
     name: 'gloves',
     color: 'blue',
-    photo: 'gloves2'
+    photo: 'gloves2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o20 = {
     img: 'assets/images/bluehat.png',
     name: 'hat',
     color: 'blue',
-    photo: 'hat1'
+    photo: 'hat1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o21 = {
     img: 'assets/images/bluejeans.png',
     name: 'jeans',
     color: 'blue',
-    photo: 'jeans1'
+    photo: 'jeans1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o22 = {
     img: 'assets/images/greenapple.png',
     name: 'apple',
     color: 'green',
-    photo: 'appleg1'
+    photo: 'appleg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o23 = {
     img: 'assets/images/redapple.png',
     name: 'apple',
     color: 'red',
-    photo: 'appler2'
+    photo: 'appler2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o24 = {
     img: 'assets/images/bluerubberduck.png',
     name: 'rubberduck',
     color: 'blue',
-    photo: 'duck1'
+    photo: 'duck1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o25 = {
     img: 'assets/images/greenbowtie.png',
     name: 'bowtie',
     color: 'green',
-    photo: 'bowtieg1'
+    photo: 'bowtieg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o26 = {
     img: 'assets/images/bluetoothbrush.png',
     name: 'toothbrush',
     color: 'blue',
-    photo: 'toothbrush1'
+    photo: 'toothbrush1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o27 = {
     img: 'assets/images/bluetowel.png',
     name: 'towel',
     color: 'blue',
-    photo: 'towel1'
+    photo: 'towel1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o28 = {
     img: 'assets/images/blueumbrella.png',
     name: 'umbrella',
     color: 'blue',
-    photo: 'umbrella1'
+    photo: 'umbrella1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o29 = {
     img: 'assets/images/bluevase.png',
     name: 'vase',
     color: 'blue',
-    photo: 'vase1'
+    photo: 'vase1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o30 = {
     img: 'assets/images/bluewaterbottle.png',
     name: 'waterbottle',
     color: 'blue',
-    photo: 'waterbottle1'
+    photo: 'waterbottle1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o31 = {
     img: 'assets/images/brownbelt.png',
     name: 'belt',
     color: 'brown',
-    photo: 'belt1'
+    photo: 'belt1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o32 = {
     img: 'assets/images/bluepencil.png',
     name: 'pencil',
     color: 'blue',
-    photo: 'pencilb9'
+    photo: 'pencilb9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o33 = {
     img: 'assets/images/browncake.png',
     name: 'cake',
     color: 'brown',
-    photo: 'cake1'
+    photo: 'cake1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o34 = {
     img: 'assets/images/browndog.png',
     name: 'dog',
     color: 'brown',
-    photo: 'dog2'
+    photo: 'dog2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o35 = {
     img: 'assets/images/brownhorse.png',
     name: 'horse',
     color: 'brown',
-    photo: 'horse1'
+    photo: 'horse1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o36 = {
     img: 'assets/images/brownrabbit.png',
     name: 'rabbit',
     color: 'brown',
-    photo: 'rabbit1'
+    photo: 'rabbit1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o37 = {
     img: 'assets/images/brownshirt.png',
     name: 'shirt',
     color: 'brown',
-    photo: 'shirt1'
+    photo: 'shirt1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o38 = {
     img: 'assets/images/brownspoon.png',
     name: 'spoon',
     color: 'brown',
-    photo: 'spoon1'
+    photo: 'spoon1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o39 = {
     img: 'assets/images/browntable.png',
     name: 'table',
     color: 'brown',
-    photo: 'table1'
+    photo: 'table1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o40 = {
     img: 'assets/images/greensocks.png',
     name: 'socks',
     color: 'green',
-    photo: 'socks1'
+    photo: 'socks1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o41 = {
     img: 'assets/images/greencar.png',
     name: 'car',
     color: 'green',
-    photo: 'car1'
+    photo: 'car1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o42 = {
     img: 'assets/images/greenflipflops.png',
     name: 'flipflops',
     color: 'green',
-    photo: 'flipflops1'
+    photo: 'flipflops1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o43 = {
     img: 'assets/images/greenfrog.png',
     name: 'frog',
     color: 'green',
-    photo: 'frogg2'
+    photo: 'frogg2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o44 = {
     img: 'assets/images/greenhat.png',
     name: 'hat',
     color: 'green',
-    photo: 'hatg2'
+    photo: 'hatg2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o45 = {
     img: 'assets/images/greenleaf.png',
     name: 'leaf',
     color: 'green',
-    photo: 'leafg1'
+    photo: 'leafg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o46 = {
     img: 'assets/images/greenlime.png',
     name: 'lime',
     color: 'green',
-    photo: 'lime1'
+    photo: 'lime1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o47 = {
     img: 'assets/images/greenpencil.png',
     name: 'pencil',
     color: 'green',
-    photo: 'pencilg1'
+    photo: 'pencilg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o48 = {
     img: 'assets/images/greenshirt.png',
     name: 'shirt',
     color: 'green',
-    photo: 'shirtg2'
+    photo: 'shirtg2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o49 = {
     img: 'assets/images/greenstapler.png',
     name: 'stapler',
     color: 'green',
-    photo: 'staplerg1'
+    photo: 'staplerg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o50 = {
     img: 'assets/images/greentoothbrush.png',
     name: 'toothbrush',
     color: 'green',
-    photo: 'toothbrushg2'
+    photo: 'toothbrushg2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o51 = {
     img: 'assets/images/greentree.png',
     name: 'tree',
     color: 'green',
-    photo: 'treeg1'
+    photo: 'treeg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o52 = {
     img: 'assets/images/greybackpack.png',
     name: 'backpack',
     color: 'grey',
-    photo: 'backpackg2'
+    photo: 'backpackg2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o53 = {
     img: 'assets/images/greyrobe.png',
     name: 'robe',
     color: 'grey',
-    photo: 'robeg1'
+    photo: 'robeg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o54 = {
     img: 'assets/images/greycouch.png',
     name: 'couch',
     color: 'grey',
-    photo: 'couchg1'
+    photo: 'couchg1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o55 = {
     img: 'assets/images/greyphone.png',
     name: 'phone',
     color: 'grey',
-    photo: 'phoneg2'
+    photo: 'phoneg2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o56 = {
     img: 'assets/images/greyscarf.png',
     name: 'scarf',
     color: 'grey',
-    photo: 'scarfg3'
+    photo: 'scarfg3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o57 = {
     img: 'assets/images/greysocks.png',
     name: 'socks',
     color: 'grey',
-    photo: 'socksg3'
+    photo: 'socksg3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o58 = {
     img: 'assets/images/orangebowl.png',
     name: 'bowl',
     color: 'orange',
-    photo: 'bowlo1'
+    photo: 'bowlo1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o59 = {
     img: 'assets/images/orangecarrots.png',
     name: 'carrots',
     color: 'orange',
-    photo: 'carrotso1'
+    photo: 'carrotso1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o60 = {
     img: 'assets/images/orangecat.png',
     name: 'cat',
     color: 'orange',
-    photo: 'cato2'
+    photo: 'cato2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o61 = {
     img: 'assets/images/orangefish.png',
     name: 'fish',
     color: 'orange',
-    photo: 'fisho1'
+    photo: 'fisho1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o62 = {
     img: 'assets/images/yellowhat.png',
     name: 'hat',
     color: 'yellow',
-    photo: 'haty9'
+    photo: 'haty9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o63 = {
     img: 'assets/images/orangeorange.png',
     name: 'orange',
     color: 'orange',
-    photo: 'orangeo1'
+    photo: 'orangeo1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o64 = {
     img: 'assets/images/orangesocks.png',
     name: 'socks',
     color: 'orange',
-    photo: 'sockso3'
+    photo: 'sockso3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o65 = {
     img: 'assets/images/pinkchair.png',
     name: 'chair',
     color: 'pink',
-    photo: 'chairp1'
+    photo: 'chairp1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o66 = {
     img: 'assets/images/pinkhairbrush.png',
     name: 'hairbrush',
     color: 'pink',
-    photo: 'hairbrushp2'
+    photo: 'hairbrushp2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o67 = {
     img: 'assets/images/pinkhat.png',
     name: 'hat',
     color: 'pink',
-    photo: 'hatp3'
+    photo: 'hatp3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o68 = {
     img: 'assets/images/yellowflower.png',
     name: 'flower',
     color: 'yellow',
-    photo: 'flowery9'
+    photo: 'flowery9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o69 = {
     img: 'assets/images/redsuitcase.png',
     name: 'suitcase',
     color: 'red',
-    photo: 'suitcaser9'
+    photo: 'suitcaser9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o70 = {
     img: 'assets/images/pinkshoes.png',
     name: 'shoes',
     color: 'pink',
-    photo: 'shoesp2'
+    photo: 'shoesp2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o71 = {
     img: 'assets/images/pinkstapler.png',
     name: 'stapler',
     color: 'pink',
-    photo: 'staplerp3'
+    photo: 'staplerp3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o72 = {
     img: 'assets/images/pinksuitcase.png',
     name: 'suitcase',
     color: 'pink',
-    photo: 'suitcasep1'
+    photo: 'suitcasep1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o73 = {
     img: 'assets/images/pinkumbrella.png',
     name: 'umbrella',
     color: 'pink',
-    photo: 'umbrellap2'
+    photo: 'umbrellap2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o74 = {
     img: 'assets/images/purpleballoon.png',
     name: 'balloon',
     color: 'purple',
-    photo: 'balloonp3'
+    photo: 'balloonp3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o75 = {
     img: 'assets/images/purplecar.png',
     name: 'car',
     color: 'purple',
-    photo: 'carp2'
+    photo: 'carp2',
+    correctname: [],
+    correctcolor: []
 };
 const o76 = {
     img: 'assets/images/purplechair.png',
     name: 'chair',
     color: 'purple',
-    photo: 'chairp2'
+    photo: 'chairp2',
+    correctname: [],
+    correctcolor: []
 };
 const o77 = {
     img: 'assets/images/bluefish.png',
     name: 'fish',
     color: 'blue',
-    photo: 'fishb9'
+    photo: 'fishb9',
+    correctname: [],
+    correctcolor: []
 };
 const o78 = {
     img: 'assets/images/purpleflower.png',
     name: 'flowers',
     color: 'purple',
-    photo: 'flowersp2'
+    photo: 'flowersp2',
+    correctname: [],
+    correctcolor: []
 };
 const o79 = {
     img: 'assets/images/purplehat.png',
     name: 'hat',
     color: 'purple',
-    photo: 'hatp4'
+    photo: 'hatp4',
+    correctname: [],
+    correctcolor: []
 };
 const o80 = {
     img: 'assets/images/purplemug.png',
     name: 'mug',
     color: 'purple',
-    photo: 'mugp1'
+    photo: 'mugp1',
+    correctname: [],
+    correctcolor: []
 };
 const o81 = {
     img: 'assets/images/purpletelephone.png',
     name: 'phone',
     color: 'purple',
-    photo: 'phonep4'
+    photo: 'phonep4',
+    correctname: [],
+    correctcolor: []
 };
 const o82 = {
     img: 'assets/images/purpletoothbrush.png',
     name: 'toothbrush',
     color: 'purple',
-    photo: 'toothbrushp5'
+    photo: 'toothbrushp5',
+    correctname: [],
+    correctcolor: []
 };
 
 const o83 = {
     img: 'assets/images/redballoon.png',
     name: 'balloon',
     color: 'red',
-    photo: 'balloonr3'
+    photo: 'balloonr3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o84 = {
     img: 'assets/images/redcherry.png',
     name: 'cherry',
     color: 'red',
-    photo: 'cherryr1'
+    photo: 'cherryr1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o85 = {
     img: 'assets/images/redfish.png',
     name: 'fish',
     color: 'red',
-    photo: 'fishr9'
+    photo: 'fishr9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o86 = {
     img: 'assets/images/reddoor.png',
     name: 'door',
     color: 'red',
-    photo: 'doorr1'
+    photo: 'doorr1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o87 = {
     img: 'assets/images/redflag.png',
     name: 'flag',
     color: 'red',
-    photo: 'flagr1'
+    photo: 'flagr1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o88 = {
     img: 'assets/images/redflower.png',
     name: 'flower',
     color: 'red',
-    photo: 'flowerr3'
+    photo: 'flowerr3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o89 = {
     img: 'assets/images/redglasses.png',
     name: 'glasses',
     color: 'red',
-    photo: 'glassesr3'
+    photo: 'glassesr3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o90 = {
     img: 'assets/images/redshoes.png',
     name: 'shoes',
     color: 'red',
-    photo: 'shoesr9'
+    photo: 'shoesr9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o91 = {
     img: 'assets/images/redstapler.png',
     name: 'stapler',
     color: 'red',
-    photo: 'staplerr4'
+    photo: 'staplerr4',
+    correctname: [],
+    correctcolor: []
 };
 
 const o92 = {
     img: 'assets/images/redsweater.png',
     name: 'sweater',
     color: 'red',
-    photo: 'sweaterr2'
+    photo: 'sweaterr2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o93 = {
     img: 'assets/images/redphone.png',
     name: 'phone',
     color: 'red',
-    photo: 'phoner3'
+    photo: 'phoner3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o94 = {
     img: 'assets/images/redtie.png',
     name: 'tie',
     color: 'red',
-    photo: 'tier1'
+    photo: 'tier1',
+    correctname: [],
+    correctcolor: []
 };
 
 
@@ -658,7 +846,9 @@ const o95 = {
     img: 'assets/images/redumbrella.png',
     name: 'umbrella',
     color: 'red',
-    photo: 'umbrellar3'
+    photo: 'umbrellar3',
+    correctname: [],
+    correctcolor: []
 };
 
 
@@ -666,161 +856,207 @@ const o96 = {
     img: 'assets/images/redwatermelon.png',
     name: 'watermelon',
     color: 'red',
-    photo: 'watermelonr1'
+    photo: 'watermelonr1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o97 = {
     img: 'assets/images/whitecar.png',
     name: 'car',
     color: 'white',
-    photo: 'carw3'
+    photo: 'carw3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o98 = {
     img: 'assets/images/whitecat.png',
     name: 'cat',
     color: 'white',
-    photo: 'catw3'
+    photo: 'catw3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o99 = {
     img: 'assets/images/whiteflower.png',
     name: 'flower',
     color: 'white',
-    photo: 'flowerw4'
+    photo: 'flowerw4',
+    correctname: [],
+    correctcolor: []
 };
 
 const o100 = {
     img: 'assets/images/purpleshirt.png',
     name: 'shirt',
     color: 'purple',
-    photo: 'shirtp9'
+    photo: 'shirtp9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o101 = {
     img: 'assets/images/whitehorse.png',
     name: 'horse',
     color: 'white',
-    photo: 'horsew2'
+    photo: 'horsew2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o102 = {
     img: 'assets/images/whitepants.png',
     name: 'pants',
     color: 'white',
-    photo: 'pantsw2'
+    photo: 'pantsw2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o103 = {
     img: 'assets/images/blueshirt.png',
     name: 'shirt',
     color: 'blue',
-    photo: 'shirtb9'
+    photo: 'shirtb9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o104 = {
     img: 'assets/images/greendress.png',
     name: 'dress',
     color: 'green',
-    photo: 'dressg9'
+    photo: 'dressg9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o105 = {
     img: 'assets/images/whitesocks.png',
     name: 'socks',
     color: 'white',
-    photo: 'socksw3'
+    photo: 'socksw3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o106 = {
     img: 'assets/images/yellowcar.png',
     name: 'car',
     color: 'yellow',
-    photo: 'cary4'
+    photo: 'cary4',
+    correctname: [],
+    correctcolor: []
 };
 
 const o107 = {
     img: 'assets/images/yellowcorn.png',
     name: 'corn',
     color: 'yellow',
-    photo: 'corny1'
+    photo: 'corny1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o108 = {
     img: 'assets/images/yellowdress.png',
     name: 'dress',
     color: 'yellow',
-    photo: 'dressy3'
+    photo: 'dressy3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o109 = {
     img: 'assets/images/yellowjacket.png',
     name: 'raincoat',
     color: 'yellow',
-    photo: 'raincoaty1'
+    photo: 'raincoaty1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o110 = {
     img: 'assets/images/yellowleaf.png',
     name: 'leaf',
     color: 'yellow',
-    photo: 'leafy2'
+    photo: 'leafy2',
+    correctname: [],
+    correctcolor: []
 };
 
 const o111 = {
     img: 'assets/images/yellowlemon.png',
     name: 'lemon',
     color: 'yellow',
-    photo: 'lemony1'
+    photo: 'lemony1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o112 = {
     img: 'assets/images/yellowlightbulb.png',
     name: 'lightbulb',
     color: 'yellow',
-    photo: 'lightbulby1'
+    photo: 'lightbulby1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o113 = {
     img: 'assets/images/greenmug.png',
     name: 'mug',
     color: 'green',
-    photo: 'mugg9'
+    photo: 'mugg9',
+    correctname: [],
+    correctcolor: []
 };
 
 const o114 = {
     img: 'assets/images/yellowpillows.png',
     name: 'pillows',
     color: 'yellow',
-    photo: 'pillowsy1'
+    photo: 'pillowsy1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o115 = {
     img: 'assets/images/yellowrubberduck.png',
     name: 'rubberduck',
     color: 'yellow',
-    photo: 'ducky3'
+    photo: 'ducky3',
+    correctname: [],
+    correctcolor: []
 };
 
 const o116 = {
     img: 'assets/images/yellowshirt.png',
     name: 'shirt',
     color: 'yellow',
-    photo: 'shirty5'
+    photo: 'shirty5',
+    correctname: [],
+    correctcolor: []
 };
 
 const o117 = {
     img: 'assets/images/yellowsuitcase.png',
     name: 'suitcase',
     color: 'yellow',
-    photo: 'suitcasey1'
+    photo: 'suitcasey1',
+    correctname: [],
+    correctcolor: []
 };
 
 const o118 = {
     img: 'assets/images/yellowumbrella.png',
     name: 'umbrella',
     color: 'yellow',
-    photo: 'umbrellay5'
+    photo: 'umbrellay5',
+    correctname: [],
+    correctcolor: []
 };
 
 
