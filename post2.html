@@ -41,7 +41,10 @@
             scale: {
                 parent: 'gameWrapper',
                 width: w,
-                height: h
+                height: h,
+                canvas:{
+                    touchAction:'auto'
+                }
             },
             dom: {
                 createContainer: true
@@ -90,6 +93,7 @@
         var timedEvent;
         function create ()
         {
+
             new grid(this);
 
             var element = this.add.dom(-215, -100).createFromCache('nameform');
