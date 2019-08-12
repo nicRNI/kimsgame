@@ -1,13 +1,3 @@
-body{
-    font-family: 'Open Sans', sans-serif;
-    background:#D7D7D7;
-    height: 100vh;
-    margin: 0 auto 0 auto;
-    width:100%;
-    text-align:center;
-    margin: 100px 0px 20px 0px;
-}
-
 .ID{
     background:#ecf0f1;
     text-align: center;
@@ -16,7 +6,7 @@ body{
     font-size:15pt;
     position: fixed;
     top: 200px;
-    left: 539px;
+    left: 939px;
     width: 120px;
 }
 
@@ -28,7 +18,7 @@ body{
     font-size:15pt;
     position: fixed;
     top:255px;
-    left: 539px;
+    left: 939px;
     width: 120px;
 }
 
@@ -39,7 +29,7 @@ body{
      font-size:15pt;
      position: fixed;
      top:200px;
-     left: 699px;
+     left: 1099px;
      width: 120px;
  }
 
@@ -51,7 +41,7 @@ body{
 
     position: fixed;
     top:255px;
-    left: 699px;
+    left: 1099px;
     width: 120px;
 }
 
@@ -62,7 +52,7 @@ body{
     color:#262626;
     position: fixed;
     top:200px;
-    left: 859px;
+    left: 1259px;
     width: 120px;
 }
 
@@ -73,7 +63,7 @@ body{
     color:#262626;
     position: fixed;
     top:255px;
-    left: 859px;
+    left: 1259px;
     width: 120px;
 }
 
@@ -84,7 +74,7 @@ body{
     color:#262626;
     position: fixed;
     top:200px;
-    left: 1019px;
+    left: 1419px;
     width: 120px;
 }
 
@@ -95,7 +85,7 @@ body{
     color:#262626;
     position: fixed;
     top:255px;
-    left: 1019px;
+    left: 1419px;
     width: 120px;
 }
 
