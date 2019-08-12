@@ -1,5 +1,5 @@
 html {
-    touch-action: auto;
+    touch-action: pan-y;
 }
 
 .ID{
