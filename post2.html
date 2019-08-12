@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<meta name="apple-mobile-web-app-capable"
+      content="yes" />
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.19.0/phaser.js"></script>
+    <script src="dist/phaser-plugin-game-scale/dist/GameScalePlugin.js"></script>
+    <script src="assets/imagedict.js"></script>
+    <script src="postJS.js"></script>
+
+
+    <link href='poststyle.css' rel='stylesheet' type='text/css'>
+
+
+
+    <script type="text/javascript">
+        //add submit all at the end, which sends data to the csv???
+        //make inputs required???
+        window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+
+
+        //
+
+        function doHome() {
+            if(confirm('Are you sure?')){
+                window.location.href = "menupage.html";
+            }
+            //change to answer/eval screen when made
+        }
+
+
+
+
+
+        //        <input id="submit" type="submit" value="Submit" onclick="return doHome(); return false;" class="submit">
+
+        var w = 1250;
+        var h = 600;
+        var config = {
+            type: Phaser.WEBGL,
+            scale: {
+                parent: 'gameWrapper',
+                autoCenter: Phaser.DOM.CENTER_BOTH,
+                width: w,
+                height: h
+            },
+            dom: {
+                createContainer: true
+            },
+            backgroundColor: '#D7D7D7',
+            plugins: {
+                global: [{
+
+                }]
+            },
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+        var game = new Phaser.Game(config);
+
+        function preload ()
+        {
+            this.load.html('nameform', 'nameform.html');
+
+        }
+
+        var cellSize = 160;//135
+        class grid {
+            constructor(scene) {
+                var xPos = [((w/2) - (2*cellSize) + (cellSize/2)), ((w/2) - (cellSize) + (cellSize/2)), ((w/2) + (cellSize/2)), ((w/2) + (cellSize) + (cellSize/2))];
+                var yPos = [((h/2) - (1.5*cellSize) + (cellSize/2)), ((h/2) - (0.5*cellSize) + (cellSize/2)), ((h/2) + (0.5*cellSize) + (cellSize/2))]; //different here bc 3sq instead of 4
+                var i;
+                var j;
+                for (i = 0; i < yPos.length; i++) {
+                    for (j = 0; j < xPos.length; j++) {
+                        var square = scene.add.rectangle(xPos[j], yPos[i], cellSize, cellSize, 0xc1c1c1);
+                        square.setStrokeStyle(3, 0x000000);
+                        square.setDepth(8);
+                    }
+                }
+            }
+
+        }
+
+
+
+        var timetext;
+        var timedEvent;
+        function create ()
+        {
+            new grid(this);
+
+            var element = this.add.dom(-215, -100).createFromCache('nameform');
+
+
+            var inst = this.add.text(330, 2, "Click on spaces on the grid to enter or edit your KIMs Game responses:", { font: "18px Arial", fill: "#000000"});
+
+            //timer-----------------
+            this.initialTime = 300;
+            //text for timer
+            timetext = this.add.text(w*.635, 30, 'Time left: ' + formatTime(this.initialTime), {font: "23px Arial", fill: "#000000"});
+            // Each 1000 ms call onEvent
+            timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, loop: true });
+            //----------------------
+        }
+
+        //Logs time of start of POST trial
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        localStorage["datetimePost"] = dateTime;
+        console.log(dateTime);
+
+
+        function formatTime(seconds){
+            // Minutes
+            var minutes = Math.floor(seconds/60);
+            // Seconds
+            var partInSeconds = seconds%60;
+            // Adds left zeros to seconds
+            partInSeconds = partInSeconds.toString().padStart(2,'0');
+            // Returns formated time
+            return `${minutes}:${partInSeconds}`;
+        }
+
+        function onEvent ()
+        {
+            this.input.on('pointerdown', () => actionOnClick(this) );
+
+            this.initialTime -= 1; // One second
+            if (this.initialTime == 0){
+                timetext.setText('GAMEOVER');
+                timedEvent.destroy();
+                document.getElementById('submit').click(); //does this work?  //submit takes you to thank you page and sends data to server??(also need menu&index for server)
+                console.log("got here");
+
+                //Call event that ends game
+
+            }
+            else{
+                timetext.setText('Time left: ' + formatTime(this.initialTime));
+            }
+        }
+        function actionOnClick (game) {
+            document.getElementById("in").blur();
+            document.getElementById("in2").blur();
+            document.getElementById("in3").blur();
+            document.getElementById("in4").blur();
+            document.getElementById("in5").blur();
+            document.getElementById("in6").blur();
+            document.getElementById("in7").blur();
+            document.getElementById("in8").blur();
+            document.getElementById("in9").blur();
+            document.getElementById("in10").blur();
+            document.getElementById("in11").blur();
+            document.getElementById("in12").blur();
+            document.getElementById("in13").blur();
+            document.getElementById("in14").blur();
+            document.getElementById("in15").blur();
+            document.getElementById("in16").blur();
+            document.getElementById("in17").blur();
+            document.getElementById("in18").blur();
+            document.getElementById("in19").blur();
+            document.getElementById("in20").blur();
+            document.getElementById("in21").blur();
+            document.getElementById("in22").blur();
+            document.getElementById("in23").blur();
+            document.getElementById("in24").blur();
+        }
+
+        function update()//see if actiononclick specific object brings up input? (or other options)
+        {
+            localStorage["resp1"] = document.getElementById("in").value;
+            localStorage["cresp1"] = document.getElementById("in2").value;
+
+            localStorage["resp2"] = document.getElementById("in3").value;
+            localStorage["cresp2"] = document.getElementById("in4").value;
+
+            localStorage["resp3"] = document.getElementById("in5").value;
+            localStorage["cresp3"] = document.getElementById("in6").value;
+
+            localStorage["resp4"] = document.getElementById("in7").value;
+            localStorage["cresp4"] = document.getElementById("in8").value;
+
+            localStorage["resp5"] = document.getElementById("in9").value;
+            localStorage["cresp5"] = document.getElementById("in10").value;
+
+            localStorage["resp6"] = document.getElementById("in11").value;
+            localStorage["cresp6"] = document.getElementById("in12").value;
+
+            localStorage["resp7"] = document.getElementById("in13").value;
+            localStorage["cresp7"] = document.getElementById("in14").value;
+
+            localStorage["resp8"] = document.getElementById("in15").value;
+            localStorage["cresp8"] = document.getElementById("in16").value;
+
+            localStorage["resp9"] = document.getElementById("in17").value;
+            localStorage["cresp9"] = document.getElementById("in18").value;
+
+            localStorage["resp10"] = document.getElementById("in19").value;
+            localStorage["cresp10"] = document.getElementById("in20").value;
+
+            localStorage["resp11"] = document.getElementById("in21").value;
+            localStorage["cresp11"] = document.getElementById("in22").value;
+
+            localStorage["resp12"] = document.getElementById("in23").value;
+            localStorage["cresp12"] = document.getElementById("in24").value;
+        }
+    </script>
+    </div>
+
+</head>
+
+</body>
+</html>
