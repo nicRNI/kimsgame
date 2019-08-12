@@ -1,9 +1,19 @@
 const o1 = {
+    img: 'assets/images/banana.png',
+    name: 'banana',
+    color: 'blue',
+    photo: 'banana',
+    correctname: ['banana'],
+    correctcolor: []
+};
+
+
+const o2 = {
     img: 'assets/images/blackballoon.png',
     name: 'balloon',
     color: 'black',
     photo: 'balloon1',
-    correctname: [],
+    correctname: ["balloon",],  //leave all uncapitalized, no spaces, (add plurals??), add misspellings?
     correctcolor: []
 };
 
@@ -11,7 +21,7 @@ const o1 = {
 //update index selection amount
 
 
-const o2 = {
+const o3 = {
     img: 'assets/images/blackboots.png',
     name: 'boots',
     color: 'black',
@@ -20,21 +30,12 @@ const o2 = {
     correctcolor: []
 };
 
-const o3 = {
+const o4 = {
     img: 'assets/images/blackcat.png',
     name: 'cat',
     color: 'black',
     photo: 'cat1',
     correctname: [],
-    correctcolor: []
-};
-
-const o4 = {
-    img: 'assets/images/banana.png',
-    name: 'banana',
-    color: 'blue',
-    photo: 'banana',
-    correctname: ['banana'],
     correctcolor: []
 };
 
