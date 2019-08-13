@@ -66,6 +66,10 @@
         //get rid of plurals and capitalization***
         var nameCheck = [false,false,true,false,false,false,false,false,false,false,false,false];;//fixxxxxxxxxxxxxxx after testing (get rid of falses)
         var colorCheck = [false,false,true,false,false,false,false,false,false,false,false,false];;
+
+        //str = str.replace(/\s+/g, '');   use this to get rid of spaces
+
+
         function scoring()
         {//use for loop
             nameCheck = [false,false,false,false,false,false,false,false,false,false,false,false];
@@ -75,12 +79,12 @@
             for(b=0; b<12; b++)
             {
                 //look for item name in storage, and item correct...
-                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+b].correctname.includes(localStorage["resp"+b]))
+                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+b].correctname.includes(localStorage["resp"+b].toLowerCase()))//see if lower case works
                 {
-                    nameCheck[b] = true;
+                    nameCheck[b] = true;         //str = str.replace(/\s+/g, '');   use this to get rid of spaces
                 }
 
-                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+b].correctcolor.includes(localStorage["cresp"+b]))
+                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+b].correctcolor.includes(localStorage["cresp"+b].toLowerCase()))
                 {
                     colorCheck[b] = true;
                 }
@@ -111,7 +115,7 @@
             var xi = 0;
             for (p = 0; p < 3; p++) {
                 for (q = 0; q < 4; q++) {
-                    if(nameCheck[xi]){
+                    if(nameCheck[xi]){ //Correct name
                         var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+xi], { font: "12px Arial", fill: "#000000"});
                         scr.setDepth(10);
 
@@ -125,11 +129,14 @@
 
                         correct++;
 
-                    } else if(!nameCheck[xi]){
+                    } else if(!nameCheck[xi]){ //Incorrect name
                         var scr = this.add.text(310+(160*q), 70+160*p, "Item: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+xi], { font: "12px Arial", fill: "#000000"});
                         scr.setDepth(10);
 
                         //NEED TO FIX LOCAL STORAGE NAMES && SCORING SO THAT IT MATCHES USERID NOT MOST RECENT
+                        if(localStorage["resp"+(xi+1)] == "Item name"){        //either change 'Item name' to blank, or just set text to blank
+                            localStorage["resp"+(xi+1)] = "";
+                        }
 
                         var scr2 = this.add.text(310+(160*q), 90+160*p, "Your response: "+localStorage["resp"+(xi+1)], { font: "12px Arial", fill: "#000000"});
                         scr2.setDepth(10);
@@ -138,7 +145,7 @@
                         scr3.setDepth(10);
                     }
 
-                    if(colorCheck[xi]){
+                    if(colorCheck[xi]){ //Correct color
                         var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+xi], { font: "12px Arial", fill: "#000000"});
                         scr4.setDepth(10);
 
@@ -150,9 +157,13 @@
 
                         correct++;
 
-                    } else if(!colorCheck[xi]){
+                    } else if(!colorCheck[xi]){ //Incorrect color
                         var scr4 = this.add.text(310+(160*q), 150+160*p, "Color: "+localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+xi], { font: "12px Arial", fill: "#000000"});
                         scr4.setDepth(10);
+
+                        if(localStorage["cresp"+(xi+1)] == "Item color"){        //either change 'Item name' to blank, or just set text to blank
+                            localStorage["cresp"+(xi+1)] = "";
+                        }
 
                         var scr5 = this.add.text(310+(160*q), 170+160*p, "Your response: "+localStorage["cresp"+(xi+1)], { font: "12px Arial", fill: "#000000"});
                         scr5.setDepth(10);
