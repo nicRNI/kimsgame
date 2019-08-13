@@ -171,12 +171,21 @@
                         var scr6 = this.add.text(310+(160*q), 190+160*p, "               Incorrect", { font: "12px Arial", fill: "#ff0000"});
                         scr6.setDepth(10);
                     }
+
+                    //NEED TO CHECK IF THIS WORKS ONCE SCORING WORKS
+                    //Marks each item correct or not true/false
+                    localStorage["correctItem"+xi] = nameCheck[xi];
+                    localStorage["correctColor"+xi] = colorCheck[xi];
+                    //need color && item
+
                     xi++;
                 }
             }
 
+
             var cor = this.add.text(w/2 - 92, h-40, correct+" /24 correct responses", { font: "18px Arial", fill: "#000000"});
             cor.setDepth(10);
+            localStorage[localStorage["ID"]+localStorage["Menu"]+"correct"] = correct; //total correct
         }
 
 
