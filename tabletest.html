@@ -8,7 +8,7 @@
 
 
         var data = [
-        [localStorage["ID"],localStorage["Menu"],'','','','','','','',localStorage[localStorage["ID"]+localStorage["Menu"]+"correct"]," "+localStorage["datetimePre"]+" "," "+localStorage["datetimePost"]+" "],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
+        [localStorage["ID"],localStorage["Event"],'','','','','','','',localStorage[localStorage["ID"]+localStorage["Menu"]+"correct"]," "+localStorage["datetimePre"]+" "," "+localStorage["datetimePost"]+" "],   //datetime should be fixed so that it tracks beginning of PRE and POST (use local storage)
         ['','',localStorage[localStorage["ID"]+localStorage["Menu"]+"item0"],localStorage[localStorage["ID"]+localStorage["Menu"]+"color0"],Number(localStorage["itemPos0"])+1,localStorage["resp1"],localStorage["cresp1"],localStorage["correctItem0"],localStorage["correctColor0"]],
         ['','',localStorage[localStorage["ID"]+localStorage["Menu"]+"item1"],localStorage[localStorage["ID"]+localStorage["Menu"]+"color1"],Number(localStorage["itemPos1"])+1,localStorage["resp2"],localStorage["cresp2"],localStorage["correctItem1"],localStorage["correctColor1"]],
         ['','',localStorage[localStorage["ID"]+localStorage["Menu"]+"item2"],localStorage[localStorage["ID"]+localStorage["Menu"]+"color2"],Number(localStorage["itemPos2"])+1,localStorage["resp3"],localStorage["cresp3"],localStorage["correctItem2"],localStorage["correctColor2"]],
@@ -27,7 +27,7 @@
 
 
     function download_csv() {
-        var csv = '"ID",MenuChoice,Item,Color,Location,ItemResponse,ColorResponse,CorrectItem,CorrectColor,TotalCorrect,DateTimePRE,DateTimePOST\n';
+        var csv = '"ID",Event,Item,Color,Location,ItemResponse,ColorResponse,CorrectItem,CorrectColor,TotalCorrect,DateTimePRE,DateTimePOST\n';
         data.forEach(function(row) {
             csv += row.join(',');
             csv += "\n";

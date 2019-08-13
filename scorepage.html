@@ -186,6 +186,17 @@
             var cor = this.add.text(w/2 - 92, h-40, correct+" /24 correct responses", { font: "18px Arial", fill: "#000000"});
             cor.setDepth(10);
             localStorage[localStorage["ID"]+localStorage["Menu"]+"correct"] = correct; //total correct
+
+
+            //Assigns menu to event #
+            if (localStorage['Menu'] == "OnPOST" || "OnPRE"){
+                localStorage['Event'] = "Onboarding";
+            } else if (localStorage['Menu'] == "Event1POST" || "Event1PRE"){
+                localStorage['Event'] = "Event1";
+
+            } else if (localStorage['Menu'] == "Event7POST" || "Event7PRE"){
+                localStorage['Event'] = "Event7";
+            }
         }
 
 
