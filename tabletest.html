@@ -27,7 +27,7 @@
 
 
     function download_csv() {
-        var csv = 'ID,DateTimePRE,MenuChoice,Item,Color,Location,ItemResponse,ColorResponse,DateTimePOST\n';
+        var csv = '"ID",DateTimePRE,MenuChoice,Item,Color,Location,ItemResponse,ColorResponse,DateTimePOST\n';
         data.forEach(function(row) {
             csv += row.join(',');
             csv += "\n";
