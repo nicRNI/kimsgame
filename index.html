@@ -61,7 +61,7 @@
             for (i = 0; i < 12; i++)
             {
                 var img1 = Phaser.Math.Between(0, 117-i);
-                console.log(img1, i);
+                //console.log(img1, i);
                 randArray[i] = imgArray[img1];
                 imgArray.splice(img1, 1);
             }
@@ -81,6 +81,7 @@
         })
     }
 
+    //Creates background 4x3 grid
     var cellSize = 160;//135
     class grid {
         constructor(scene) {
@@ -105,10 +106,10 @@
     var timedEvent;
     function create ()
     {
-        //plan out functions first (inventoryphotos, 2min timer, ID/Date/Menu, output/storage, etc.)
-
         new grid(this);
 
+        //Saves item name, position, and color to localStorage
+        //Adds item images to grid
         var xi = 0;
         for (p = 0; p < 3; p++) {
             for (q = 0; q < 4; q++) {
@@ -123,7 +124,6 @@
             }
         }
 
-        //see this code to get random https://labs.phaser.io/edit.html?src=src\game%20objects\group\sprite%20pool.js
 
         //2-minute timer-----------------
         this.initialTime = 120;
