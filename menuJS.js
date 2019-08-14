@@ -58,7 +58,9 @@ function get_id(field, ID)
 
 function doClick()
 {
-    if (localStorage['Menu'] == "OnPOST"){
+    if (document.getElementById('login').value == "ID"){
+        alert("Please enter your ID");
+    } else if (localStorage['Menu'] == "OnPOST"){
         window.location.href = "instructions2.html";
     } else if (localStorage['Menu'] == "Event1POST"){
         window.location.href = "instructions2.html";

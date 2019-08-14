@@ -195,14 +195,17 @@
 
 
             //Assigns menu to event #
-            if (localStorage['Menu'] == "OnPOST" || "OnPRE"){
+            if (localStorage['Menu'] == "OnPRE"){
                 localStorage['Event'] = "Onboarding";
-            } else if (localStorage['Menu'] == "Event1POST" || "Event1PRE"){
+                console.log("made");
+            } else if (localStorage['Menu'] == "Event1PRE"){
                 localStorage['Event'] = "Event1";
+                console.log("madeee");
 
-            } else if (localStorage['Menu'] == "Event7POST" || "Event7PRE"){
+            } else if (localStorage['Menu'] == "Event7PRE"){
                 localStorage['Event'] = "Event7";
             }
+
         }
 
 
