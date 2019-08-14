@@ -4,7 +4,7 @@ const o1 = {
     color: 'blue',
     photo: 'banana',
     correctname: ['banana'], //leave all uncapitalized, no spaces, (add plurals??), add misspellings?
-    correctcolor: []
+    correctcolor: ["blue","darkblue"]
 };
 
 
@@ -13,8 +13,8 @@ const o2 = {
     name: 'balloon',
     color: 'black',
     photo: 'balloon1',
-    correctname: ["balloon",],  //leave all uncapitalized, no spaces, (add plurals??), add misspellings?
-    correctcolor: []
+    correctname: ["balloon","balon","baloon","ballon","ballone"],  //leave all uncapitalized, no spaces, (add plurals??), add misspellings?
+    correctcolor: ["black"]
 };
 
 //make sure to 1. test file in imagetesting... 2. update in index preload... 3. update image array at bottom
@@ -26,8 +26,8 @@ const o3 = {
     name: 'boots',
     color: 'black',
     photo: 'boots1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["boot","boots","shoe","shoes","combatboot","combatboots"],
+    correctcolor: ["black","gray","grey"]
 };
 
 const o4 = {
@@ -35,8 +35,8 @@ const o4 = {
     name: 'cat',
     color: 'black',
     photo: 'cat1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["cat","kitten","feline","kitty"],
+    correctcolor: ["black"]
 };
 
 const o5 = {
@@ -44,8 +44,8 @@ const o5 = {
     name: 'dog',
     color: 'black',
     photo: 'dog1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["dog","puppy","lab","labradorretriever","canine","blacklab"],
+    correctcolor: ["black"]
 };
 
 const o6 = {
@@ -53,8 +53,8 @@ const o6 = {
     name: 'dress',
     color: 'black',
     photo: 'dress1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["dress","blouse"],
+    correctcolor: ["black"]
 };
 
 const o7 = {
@@ -62,8 +62,8 @@ const o7 = {
     name: 'fork',
     color: 'black',
     photo: 'fork1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["fork"],
+    correctcolor: ["black"]
 };
 
 const o8 = {
@@ -71,8 +71,8 @@ const o8 = {
     name: 'glasses',
     color: 'black',
     photo: 'glasses1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["glasses","eyeglasses","sunglasses","spectacles","frames"],
+    correctcolor: ["black"]
 };
 
 const o9 = {
@@ -80,8 +80,8 @@ const o9 = {
     name: 'glove',
     color: 'black',
     photo: 'glove1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["glove","gloves","leatherglove","leathergloves"],
+    correctcolor: ["black"]
 };
 
 const o10 = {
@@ -89,8 +89,8 @@ const o10 = {
     name: 'football',
     color: 'brown',
     photo: 'football1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["football","ball"],
+    correctcolor: ["brown","tan"]
 };
 
 const o11 = {
@@ -98,8 +98,8 @@ const o11 = {
     name: 'pants',
     color: 'black',
     photo: 'pants1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["pants","sweats","sweatpants","trackpants","bottoms"],
+    correctcolor: ["black"]
 };
 
 const o12 = {
@@ -107,8 +107,8 @@ const o12 = {
     name: 'phone',
     color: 'black',
     photo: 'phone1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["phone","telephone","rotaryphone","rotarydialphone","rotary"],
+    correctcolor: ["black"]
 };
 
 const o13 = {
@@ -116,8 +116,8 @@ const o13 = {
     name: 'spatula',
     color: 'black',
     photo: 'spatula1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["spatula"],
+    correctcolor: ["black"]
 };
 
 const o14 = {
@@ -125,8 +125,8 @@ const o14 = {
     name: 'backpack',
     color: 'blue',
     photo: 'backpack1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["backpack","knapsack","satchel","bag","pack","sack"],
+    correctcolor: ["blue","darkblue","turquoise"]
 };
 
 const o15 = {
@@ -134,8 +134,8 @@ const o15 = {
     name: 'bird',
     color: 'blue',
     photo: 'bird1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["bird","bluebird"],
+    correctcolor: ["blue","darkblue"]
 };
 
 const o16 = {
@@ -143,8 +143,8 @@ const o16 = {
     name: 'bowtie',
     color: 'blue',
     photo: 'bowtie1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["bow","bowtie"],
+    correctcolor: ["blue","darkblue","navyblue","navy"]
 };
 
 const o17 = {
@@ -152,8 +152,8 @@ const o17 = {
     name: 'dress',
     color: 'blue',
     photo: 'dress2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["dress","blouse"],
+    correctcolor: ["blue","darkblue"]
 };
 
 const o18 = {
@@ -161,8 +161,8 @@ const o18 = {
     name: 'frog',
     color: 'blue',
     photo: 'frog1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["frog","dartfrog","poisondartfrog","toad","treefrog"],
+    correctcolor: ["blue","darkblue","black"]
 };
 
 const o19 = {
@@ -170,8 +170,8 @@ const o19 = {
     name: 'gloves',
     color: 'blue',
     photo: 'gloves2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["glove","gloves","latexgloves","latexglove","rubbergloves","rubberglove","surgicalgloves","surgicalglove"],
+    correctcolor: ["blue","lightblue","powderblue"]
 };
 
 const o20 = {
@@ -179,8 +179,8 @@ const o20 = {
     name: 'hat',
     color: 'blue',
     photo: 'hat1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["hat","cap","beanie","toboggan","tobogganhat"],
+    correctcolor: ["blue","darkblue"]
 };
 
 const o21 = {
@@ -188,8 +188,8 @@ const o21 = {
     name: 'jeans',
     color: 'blue',
     photo: 'jeans1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["pants","jeans","bottoms"],
+    correctcolor: ["blue","lightblue","powderblue","denim"]
 };
 
 const o22 = {
@@ -197,8 +197,8 @@ const o22 = {
     name: 'apple',
     color: 'green',
     photo: 'appleg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["apple","grannysmithapple","sourapple"],
+    correctcolor: ["green"]
 };
 
 const o23 = {
@@ -206,8 +206,8 @@ const o23 = {
     name: 'apple',
     color: 'red',
     photo: 'appler2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["apple"],
+    correctcolor: ["red"]
 };
 
 const o24 = {
@@ -215,8 +215,8 @@ const o24 = {
     name: 'rubberduck',
     color: 'blue',
     photo: 'duck1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["duck","rubberduck","ducky","rubberducky","toyduck"],
+    correctcolor: ["blue","darkblue"]
 };
 
 const o25 = {
@@ -224,8 +224,8 @@ const o25 = {
     name: 'bowtie',
     color: 'green',
     photo: 'bowtieg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["bow","bowtie"],
+    correctcolor: ["green","darkgreen"]
 };
 
 const o26 = {
@@ -233,8 +233,8 @@ const o26 = {
     name: 'toothbrush',
     color: 'blue',
     photo: 'toothbrush1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["toothbrush"],
+    correctcolor: ["blue","darkblue"]
 };
 
 const o27 = {
@@ -242,8 +242,8 @@ const o27 = {
     name: 'towel',
     color: 'blue',
     photo: 'towel1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["towel","bathtowel","blanket"],
+    correctcolor: ["blue","skyblue","seablue"]
 };
 
 const o28 = {
@@ -251,8 +251,8 @@ const o28 = {
     name: 'umbrella',
     color: 'blue',
     photo: 'umbrella1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["umbrella"],
+    correctcolor: ["blue","darkblue","navyblue",]
 };
 
 const o29 = {
@@ -260,8 +260,8 @@ const o29 = {
     name: 'vase',
     color: 'blue',
     photo: 'vase1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["vase","urn","flowervase"],
+    correctcolor: ["blue","darkblue","navyblue","navy"]
 };
 
 const o30 = {
@@ -269,8 +269,8 @@ const o30 = {
     name: 'waterbottle',
     color: 'blue',
     photo: 'waterbottle1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["waterbottle","bottle","plasticbottle",],
+    correctcolor: ["blue","clear","lightblue"]
 };
 
 const o31 = {
@@ -278,8 +278,8 @@ const o31 = {
     name: 'belt',
     color: 'brown',
     photo: 'belt1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["belt"],
+    correctcolor: ["brown","darkbrown"]
 };
 
 const o32 = {
@@ -287,8 +287,8 @@ const o32 = {
     name: 'pencil',
     color: 'blue',
     photo: 'pencilb9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["pencil","coloredpencil"],
+    correctcolor: ["blue","darkblue"]
 };
 
 const o33 = {
@@ -296,8 +296,8 @@ const o33 = {
     name: 'cake',
     color: 'brown',
     photo: 'cake1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["cake","chocolatecake"],
+    correctcolor: ["brown","darkbrown","chocolate"]
 };
 
 const o34 = {
@@ -305,8 +305,8 @@ const o34 = {
     name: 'dog',
     color: 'brown',
     photo: 'dog2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["dog","puppy","lab","labradorretriever","canine","chocolatelab"],
+    correctcolor: ["brown","lightbrown","chocolate","tan"]
 };
 
 const o35 = {
@@ -314,8 +314,8 @@ const o35 = {
     name: 'horse',
     color: 'brown',
     photo: 'horse1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["horse","pony","stallion"],
+    correctcolor: ["brown",]
 };
 
 const o36 = {
@@ -323,8 +323,8 @@ const o36 = {
     name: 'rabbit',
     color: 'brown',
     photo: 'rabbit1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["rabbit","bunny",],
+    correctcolor: ["brown",]
 };
 
 const o37 = {
@@ -332,8 +332,8 @@ const o37 = {
     name: 'shirt',
     color: 'brown',
     photo: 'shirt1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shirt","tshirt","tee","t-shirt","top"],
+    correctcolor: ["brown","tan","beige","gray","grey"]
 };
 
 const o38 = {
@@ -341,8 +341,8 @@ const o38 = {
     name: 'spoon',
     color: 'brown',
     photo: 'spoon1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["spoon","woodenspoon"],
+    correctcolor: ["brown","tan"]
 };
 
 const o39 = {
@@ -350,8 +350,8 @@ const o39 = {
     name: 'table',
     color: 'brown',
     photo: 'table1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["table","diningtable","woodentable","coffeetable","sidetable"],
+    correctcolor: ["brown","black"]
 };
 
 const o40 = {
@@ -359,8 +359,8 @@ const o40 = {
     name: 'socks',
     color: 'green',
     photo: 'socks1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["sock","socks"],
+    correctcolor: ["green"]
 };
 
 const o41 = {
@@ -368,8 +368,8 @@ const o41 = {
     name: 'car',
     color: 'green',
     photo: 'car1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["car","mercedes","sportscar","mercedesbenz","benz"],
+    correctcolor: ["green"]
 };
 
 const o42 = {
@@ -377,8 +377,8 @@ const o42 = {
     name: 'flipflops',
     color: 'green',
     photo: 'flipflops1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["flipflops","flipflop","sandals","sandal","shoes","shoe","slippers","slipper"],
+    correctcolor: ["green"]
 };
 
 const o43 = {
@@ -386,8 +386,8 @@ const o43 = {
     name: 'frog',
     color: 'green',
     photo: 'frogg2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["frog","toad"],
+    correctcolor: ["green","lightgreen"]
 };
 
 const o44 = {
@@ -395,8 +395,8 @@ const o44 = {
     name: 'hat',
     color: 'green',
     photo: 'hatg2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["hat","baseballcap","cap","ballcap","baseballhat"],
+    correctcolor: ["green","lightgreen"]
 };
 
 const o45 = {
@@ -404,8 +404,8 @@ const o45 = {
     name: 'leaf',
     color: 'green',
     photo: 'leafg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["leaf"],
+    correctcolor: ["green"]
 };
 
 const o46 = {
@@ -413,8 +413,8 @@ const o46 = {
     name: 'lime',
     color: 'green',
     photo: 'lime1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["lime","limes","limewedge","limewedges","limeslice","limeslices"],
+    correctcolor: ["green"]
 };
 
 const o47 = {
@@ -422,8 +422,8 @@ const o47 = {
     name: 'pencil',
     color: 'green',
     photo: 'pencilg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["pencil"],
+    correctcolor: ["green"]
 };
 
 const o48 = {
@@ -431,8 +431,8 @@ const o48 = {
     name: 'shirt',
     color: 'green',
     photo: 'shirtg2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shirt","tshirt","tee","t-shirt","top"],
+    correctcolor: ["green","lightgreen"]
 };
 
 const o49 = {
@@ -440,8 +440,8 @@ const o49 = {
     name: 'stapler',
     color: 'green',
     photo: 'staplerg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["stapler"],
+    correctcolor: ["green","lightgreen"]
 };
 
 const o50 = {
@@ -449,8 +449,8 @@ const o50 = {
     name: 'toothbrush',
     color: 'green',
     photo: 'toothbrushg2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["toothbrush"],
+    correctcolor: ["green"]
 };
 
 const o51 = {
@@ -458,8 +458,8 @@ const o51 = {
     name: 'tree',
     color: 'green',
     photo: 'treeg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["tree","trees","elmtree","elmtrees","oaktree","oaktrees","elm","elms","oak","oaks","willowtree","willow","willows","willowtrees"],
+    correctcolor: ["green"]
 };
 
 const o52 = {
@@ -467,8 +467,8 @@ const o52 = {
     name: 'backpack',
     color: 'grey',
     photo: 'backpackg2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["backpack","knapsack","satchel","bag","pack","sack"],
+    correctcolor: ["gray","grey"]
 };
 
 const o53 = {
@@ -476,8 +476,8 @@ const o53 = {
     name: 'robe',
     color: 'grey',
     photo: 'robeg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["robe","bathrobe"],
+    correctcolor: ["grey","gray","beige"]
 };
 
 const o54 = {
@@ -485,8 +485,8 @@ const o54 = {
     name: 'couch',
     color: 'grey',
     photo: 'couchg1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["sofa","couch","loveseat","chair","seat"],
+    correctcolor: ["grey","gray","white","beige"]
 };
 
 const o55 = {
@@ -494,8 +494,8 @@ const o55 = {
     name: 'phone',
     color: 'grey',
     photo: 'phoneg2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["phone","telephone","rotaryphone","rotarydialphone","rotary"],
+    correctcolor: ["grey","gray","silver"]
 };
 
 const o56 = {
@@ -503,8 +503,8 @@ const o56 = {
     name: 'scarf',
     color: 'grey',
     photo: 'scarfg3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["scarf","shawl"],
+    correctcolor: ["grey","gray"]
 };
 
 const o57 = {
@@ -512,8 +512,8 @@ const o57 = {
     name: 'socks',
     color: 'grey',
     photo: 'socksg3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["socks","sock","kneesocks","kneesock"],
+    correctcolor: ["grey","gray","darkgray","darkgrey"]
 };
 
 const o58 = {
@@ -521,8 +521,8 @@ const o58 = {
     name: 'bowl',
     color: 'orange',
     photo: 'bowlo1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["bowl","dish","saucer","cerealbowl","soupbowl"],
+    correctcolor: ["orange","salmon","red","coral"]
 };
 
 const o59 = {
@@ -530,8 +530,8 @@ const o59 = {
     name: 'carrots',
     color: 'orange',
     photo: 'carrotso1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["carrots","carrot"],
+    correctcolor: ["orange","green"]
 };
 
 const o60 = {
@@ -539,8 +539,8 @@ const o60 = {
     name: 'cat',
     color: 'orange',
     photo: 'cato2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["cat","kitten","feline","kitty","tabbycat"],
+    correctcolor: ["orange","tan"]
 };
 
 const o61 = {
@@ -548,8 +548,8 @@ const o61 = {
     name: 'fish',
     color: 'orange',
     photo: 'fisho1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["fish","goldfish"],
+    correctcolor: ["orange"]
 };
 
 const o62 = {
@@ -557,8 +557,8 @@ const o62 = {
     name: 'hat',
     color: 'yellow',
     photo: 'haty9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["hat","baseballcap","cap","ballcap","baseballhat"],
+    correctcolor: ["yellow"]
 };
 
 const o63 = {
@@ -566,8 +566,8 @@ const o63 = {
     name: 'orange',
     color: 'orange',
     photo: 'orangeo1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["orange"],
+    correctcolor: ["orange"]
 };
 
 const o64 = {
@@ -575,8 +575,8 @@ const o64 = {
     name: 'socks',
     color: 'orange',
     photo: 'sockso3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["socks","sock","kneesocks","kneesock"],
+    correctcolor: ["orange"]
 };
 
 const o65 = {
@@ -584,8 +584,8 @@ const o65 = {
     name: 'chair',
     color: 'pink',
     photo: 'chairp1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["chair","couch","seat"],
+    correctcolor: ["pink","lightpink","rose"]
 };
 
 const o66 = {
@@ -593,8 +593,8 @@ const o66 = {
     name: 'hairbrush',
     color: 'pink',
     photo: 'hairbrushp2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["brush","hairbrush","comb"],
+    correctcolor: ["magenta","fushia","hotpink","pink"]
 };
 
 const o67 = {
@@ -602,8 +602,8 @@ const o67 = {
     name: 'hat',
     color: 'pink',
     photo: 'hatp3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["hat","cap","beanie","toboggan","tobogganhat"],
+    correctcolor: ["magenta","fushia","hotpink","pink","red"]
 };
 
 const o68 = {
@@ -611,8 +611,8 @@ const o68 = {
     name: 'flower',
     color: 'yellow',
     photo: 'flowery9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["flower","flowers","rose","roses"],
+    correctcolor: ["yellow"]
 };
 
 const o69 = {
@@ -620,8 +620,8 @@ const o69 = {
     name: 'suitcase',
     color: 'red',
     photo: 'suitcaser9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["suitcase","roller","rollersuitcase","luggage"],
+    correctcolor: ["red"]
 };
 
 const o70 = {
@@ -629,8 +629,8 @@ const o70 = {
     name: 'shoes',
     color: 'pink',
     photo: 'shoesp2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shoes","shoe","sneakers","sneaker","boot","boots","oxfordshoe","oxfordshoes","oxfords"],
+    correctcolor: ["pink","lightpink"]
 };
 
 const o71 = {
@@ -638,8 +638,8 @@ const o71 = {
     name: 'stapler',
     color: 'pink',
     photo: 'staplerp3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["stapler"],
+    correctcolor: ["magenta","fushia","hotpink","pink","red"]
 };
 
 const o72 = {
@@ -647,8 +647,8 @@ const o72 = {
     name: 'suitcase',
     color: 'pink',
     photo: 'suitcasep1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["suitcase","roller","rollersuitcase","luggage"],
+    correctcolor: ["magenta","fushia","hotpink","pink"]
 };
 
 const o73 = {
@@ -656,8 +656,8 @@ const o73 = {
     name: 'umbrella',
     color: 'pink',
     photo: 'umbrellap2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["umbrella"],
+    correctcolor: ["magenta","fushia","hotpink","pink","red"]
 };
 
 const o74 = {
@@ -665,8 +665,8 @@ const o74 = {
     name: 'balloon',
     color: 'purple',
     photo: 'balloonp3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["balloon","balon","baloon","ballon","ballone"],
+    correctcolor: ["pink","purple"]
 };
 
 const o75 = {
@@ -674,64 +674,64 @@ const o75 = {
     name: 'car',
     color: 'purple',
     photo: 'carp2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["car","camero","challenger","dodgechallenger","sportscar","mustang"],
+    correctcolor: ["purple"]
 };
 const o76 = {
     img: 'assets/images/purplechair.png',
     name: 'chair',
     color: 'purple',
     photo: 'chairp2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["chair","seat"],
+    correctcolor: ["purple","violet"]
 };
 const o77 = {
     img: 'assets/images/bluefish.png',
     name: 'fish',
     color: 'blue',
     photo: 'fishb9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["fish","goldfish"],
+    correctcolor: ["blue","darkblue"]
 };
 const o78 = {
     img: 'assets/images/purpleflower.png',
     name: 'flowers',
     color: 'purple',
     photo: 'flowersp2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["flower","flowers","violet","violets","violetflower","violetflowers","lilac","lilacs"],
+    correctcolor: ["purple","violet"]
 };
 const o79 = {
     img: 'assets/images/purplehat.png',
     name: 'hat',
     color: 'purple',
     photo: 'hatp4',
-    correctname: [],
-    correctcolor: []
+    correctname: ["hat","baseballcap","cap","ballcap","baseballhat"],
+    correctcolor: ["purple","violet"]
 };
 const o80 = {
     img: 'assets/images/purplemug.png',
     name: 'mug',
     color: 'purple',
     photo: 'mugp1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["mug","cup","coffeemug","coffeecup","teacup"],
+    correctcolor: ["purple","lavender","pink"]
 };
 const o81 = {
     img: 'assets/images/purpletelephone.png',
     name: 'phone',
     color: 'purple',
     photo: 'phonep4',
-    correctname: [],
-    correctcolor: []
+    correctname: ["phone","telephone","rotaryphone","rotarydialphone","rotary"],
+    correctcolor: ["purple","violet"]
 };
 const o82 = {
     img: 'assets/images/purpletoothbrush.png',
     name: 'toothbrush',
     color: 'purple',
     photo: 'toothbrushp5',
-    correctname: [],
-    correctcolor: []
+    correctname: ["toothbrush"],
+    correctcolor: ["purple"]
 };
 
 const o83 = {
@@ -739,8 +739,8 @@ const o83 = {
     name: 'balloon',
     color: 'red',
     photo: 'balloonr3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["balloon","balon","baloon","ballon","ballone"],
+    correctcolor: ["red","coral"]
 };
 
 const o84 = {
@@ -748,8 +748,8 @@ const o84 = {
     name: 'cherry',
     color: 'red',
     photo: 'cherryr1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["cherry"],
+    correctcolor: ["red","cherryred","darkred"]
 };
 
 const o85 = {
@@ -757,8 +757,8 @@ const o85 = {
     name: 'fish',
     color: 'red',
     photo: 'fishr9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["fish","goldfish"],
+    correctcolor: ["red","orange","coral","bloodorange"]
 };
 
 const o86 = {
@@ -766,8 +766,8 @@ const o86 = {
     name: 'door',
     color: 'red',
     photo: 'doorr1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["door","frontdoor"],
+    correctcolor: ["red","maroon"]
 };
 
 const o87 = {
@@ -775,8 +775,8 @@ const o87 = {
     name: 'flag',
     color: 'red',
     photo: 'flagr1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["flag","banner"],
+    correctcolor: ["red","maroon"]
 };
 
 const o88 = {
@@ -784,8 +784,8 @@ const o88 = {
     name: 'flower',
     color: 'red',
     photo: 'flowerr3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["flower","flowers","sunflower","sunflowers"],
+    correctcolor: ["red","cherryred"]
 };
 
 const o89 = {
@@ -793,8 +793,8 @@ const o89 = {
     name: 'glasses',
     color: 'red',
     photo: 'glassesr3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["glasses","eyeglasses","sunglasses","spectacles","frames"],
+    correctcolor: ["red","orange","coral"]
 };
 
 const o90 = {
@@ -802,8 +802,8 @@ const o90 = {
     name: 'shoes',
     color: 'red',
     photo: 'shoesr9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shoes","shoe","heels","heel","highheels","highheel","pump","pumps","stiletto","stilettos"],
+    correctcolor: ["red","cherryred"]
 };
 
 const o91 = {
@@ -811,8 +811,8 @@ const o91 = {
     name: 'stapler',
     color: 'red',
     photo: 'staplerr4',
-    correctname: [],
-    correctcolor: []
+    correctname: ["stapler"],
+    correctcolor: ["red","cherryred"]
 };
 
 const o92 = {
@@ -820,8 +820,8 @@ const o92 = {
     name: 'sweater',
     color: 'red',
     photo: 'sweaterr2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["sweater","shirt"],
+    correctcolor: ["red","pink"]
 };
 
 const o93 = {
@@ -829,8 +829,8 @@ const o93 = {
     name: 'phone',
     color: 'red',
     photo: 'phoner3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["phone","telephone","rotaryphone","rotarydialphone","rotary"],
+    correctcolor: ["red","cherryred"]
 };
 
 const o94 = {
@@ -838,8 +838,8 @@ const o94 = {
     name: 'tie',
     color: 'red',
     photo: 'tier1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["tie","necktie"],
+    correctcolor: ["red","coral"]
 };
 
 
@@ -848,8 +848,8 @@ const o95 = {
     name: 'umbrella',
     color: 'red',
     photo: 'umbrellar3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["umbrella"],
+    correctcolor: ["red","maroon"]
 };
 
 
@@ -858,8 +858,8 @@ const o96 = {
     name: 'watermelon',
     color: 'red',
     photo: 'watermelonr1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["watermelon","melon"],
+    correctcolor: ["red","pink"]
 };
 
 const o97 = {
@@ -867,8 +867,8 @@ const o97 = {
     name: 'car',
     color: 'white',
     photo: 'carw3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["car","mercedes","sportscar","mercedesbenz","benz"],
+    correctcolor: ["white","silver","cream"]
 };
 
 const o98 = {
@@ -876,8 +876,8 @@ const o98 = {
     name: 'cat',
     color: 'white',
     photo: 'catw3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["cat","kitten","kitty","feline"],
+    correctcolor: ["white","cream"]
 };
 
 const o99 = {
@@ -885,8 +885,8 @@ const o99 = {
     name: 'flower',
     color: 'white',
     photo: 'flowerw4',
-    correctname: [],
-    correctcolor: []
+    correctname: ["flower","flowers"],
+    correctcolor: ["white","cream"]
 };
 
 const o100 = {
@@ -894,8 +894,8 @@ const o100 = {
     name: 'shirt',
     color: 'purple',
     photo: 'shirtp9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shirt","tshirt","tee","t-shirt","top"],
+    correctcolor: ["purple","violet"]
 };
 
 const o101 = {
@@ -903,8 +903,8 @@ const o101 = {
     name: 'horse',
     color: 'white',
     photo: 'horsew2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["horse","pony","stallion"],
+    correctcolor: ["white","grey","gray","cream"]
 };
 
 const o102 = {
@@ -912,8 +912,8 @@ const o102 = {
     name: 'pants',
     color: 'white',
     photo: 'pantsw2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["pants","jeans","bottoms"],
+    correctcolor: ["white","cream"]
 };
 
 const o103 = {
@@ -921,8 +921,8 @@ const o103 = {
     name: 'shirt',
     color: 'blue',
     photo: 'shirtb9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shirt","tshirt","tee","t-shirt","top"],
+    correctcolor: ["blue","darkblue",]
 };
 
 const o104 = {
@@ -930,8 +930,8 @@ const o104 = {
     name: 'dress',
     color: 'green',
     photo: 'dressg9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["dress","blouse"],
+    correctcolor: ["green"]
 };
 
 const o105 = {
@@ -939,8 +939,8 @@ const o105 = {
     name: 'socks',
     color: 'white',
     photo: 'socksw3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["socks","sock"],
+    correctcolor: ["white"]
 };
 
 const o106 = {
@@ -948,8 +948,8 @@ const o106 = {
     name: 'car',
     color: 'yellow',
     photo: 'cary4',
-    correctname: [],
-    correctcolor: []
+    correctname: ["car","audi","sportscar"],
+    correctcolor: ["yellow","gold","mustard"]
 };
 
 const o107 = {
@@ -957,8 +957,8 @@ const o107 = {
     name: 'corn',
     color: 'yellow',
     photo: 'corny1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["corn","cornonthecob"],
+    correctcolor: ["yellow"]
 };
 
 const o108 = {
@@ -966,8 +966,8 @@ const o108 = {
     name: 'dress',
     color: 'yellow',
     photo: 'dressy3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["dress","blouse"],
+    correctcolor: ["yellow"]
 };
 
 const o109 = {
@@ -975,8 +975,8 @@ const o109 = {
     name: 'raincoat',
     color: 'yellow',
     photo: 'raincoaty1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["raincoat","rainjacket","coat","jacket","rainponcho","poncho","anorak"],
+    correctcolor: ["yellow","mustard"]
 };
 
 const o110 = {
@@ -984,8 +984,8 @@ const o110 = {
     name: 'leaf',
     color: 'yellow',
     photo: 'leafy2',
-    correctname: [],
-    correctcolor: []
+    correctname: ["leaf","mapleleaf"],
+    correctcolor: ["yellow"]
 };
 
 const o111 = {
@@ -993,8 +993,8 @@ const o111 = {
     name: 'lemon',
     color: 'yellow',
     photo: 'lemony1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["lemon","lemons","lemonslice","lemonslices"],
+    correctcolor: ["yellow"]
 };
 
 const o112 = {
@@ -1002,8 +1002,8 @@ const o112 = {
     name: 'lightbulb',
     color: 'yellow',
     photo: 'lightbulby1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["lightbulb","bulb"],
+    correctcolor: ["yellow","gold","mustard"]
 };
 
 const o113 = {
@@ -1011,8 +1011,8 @@ const o113 = {
     name: 'mug',
     color: 'green',
     photo: 'mugg9',
-    correctname: [],
-    correctcolor: []
+    correctname: ["mug","cup","coffeemug","coffeecup","teacup"],
+    correctcolor: ["green","darkgreen","evergreen"]
 };
 
 const o114 = {
@@ -1020,8 +1020,8 @@ const o114 = {
     name: 'pillows',
     color: 'yellow',
     photo: 'pillowsy1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["pillow","pillows","cushion","cushions","throwpillow","throwpillows","couchpillow","couchpillows","couchcushion","couchcushions"],
+    correctcolor: ["yellow","mustard"]
 };
 
 const o115 = {
@@ -1029,8 +1029,8 @@ const o115 = {
     name: 'rubberduck',
     color: 'yellow',
     photo: 'ducky3',
-    correctname: [],
-    correctcolor: []
+    correctname: ["duck","rubberduck","ducky","rubberducky","toyduck"],
+    correctcolor: ["yellow"]
 };
 
 const o116 = {
@@ -1038,8 +1038,8 @@ const o116 = {
     name: 'shirt',
     color: 'yellow',
     photo: 'shirty5',
-    correctname: [],
-    correctcolor: []
+    correctname: ["shirt","tshirt","tee","t-shirt","top"],
+    correctcolor: ["yellow"]
 };
 
 const o117 = {
@@ -1047,8 +1047,8 @@ const o117 = {
     name: 'suitcase',
     color: 'yellow',
     photo: 'suitcasey1',
-    correctname: [],
-    correctcolor: []
+    correctname: ["suitcase","roller","rollersuitcase","luggage"],
+    correctcolor: ["yellow"]
 };
 
 const o118 = {
@@ -1056,8 +1056,8 @@ const o118 = {
     name: 'umbrella',
     color: 'yellow',
     photo: 'umbrellay5',
-    correctname: [],
-    correctcolor: []
+    correctname: ["umbrella"],
+    correctcolor: ["yellow","mustard"]
 };
 
 
