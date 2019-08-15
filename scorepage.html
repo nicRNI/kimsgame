@@ -64,8 +64,8 @@
 
 
         //get rid of plurals and capitalization***
-        var nameCheck = [false,false,true,false,false,false,false,false,false,false,false,false];;//fixxxxxxxxxxxxxxx after testing (get rid of falses)
-        var colorCheck = [false,false,true,false,false,false,false,false,false,false,false,false];;
+        var nameCheck; //= [false,false,true,false,false,false,false,false,false,false,false,false];;//fixxxxxxxxxxxxxxx after testing (get rid of falses)
+        var colorCheck; //= [false,false,true,false,false,false,false,false,false,false,false,false];;
 
         //str = str.replace(/\s+/g, '');   use this to get rid of spaces
 
@@ -79,18 +79,20 @@
             for(b=0; b<12; b++)
             {                                   //if broken, move currentitem/color back to includes and test
                 //look for item name in storage, and item correct...
-                var currentItem = localStorage["resp"+b+1].toLowerCase();
+                var currentItem = localStorage["resp"+(b+1)].toLowerCase();
                 currentItem = currentItem.replace(/\s+/g, '');
 
-                var currentColor = localStorage["cresp"+b+1].toLowerCase(); //add +1 cause resp is 1 indexed
+                var currentColor = localStorage["cresp"+(b+1)].toLowerCase(); //add +1 cause resp is 1 indexed
                 currentColor = currentColor.replace(/\s+/g, '');
 
-                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+b].correctname.includes(currentItem))//see if lower case works
+                var retrievedObject = localStorage.getItem(localStorage["ID"]+localStorage["Menu"]+"OBJ"+b);
+
+                if(JSON.parse(retrievedObject).correctname.includes(currentItem))//see if lower case works
                 {
                     nameCheck[b] = true;         //str = str.replace(/\s+/g, '');   use this to get rid of spaces
                 }
 
-                if(localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+b].correctcolor.includes(currentColor))
+                if(JSON.parse(retrievedObject).correctcolor.includes(currentColor))
                 {
                     colorCheck[b] = true;
                 }
@@ -115,7 +117,7 @@
                 localStorage['Menu'] = "Event7PRE";
             }
 
-            //scoring(); //once scoring is ready, delete falses
+            scoring(); //once scoring is ready, delete falses
 
             var correct = 0;
             var xi = 0;

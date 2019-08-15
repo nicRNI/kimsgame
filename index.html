@@ -46,6 +46,7 @@
     };
     var game = new Phaser.Game(config);
     var randArray = [];
+    window.ppp=[];
 
     function preload ()
     {
@@ -61,8 +62,9 @@
             for (i = 0; i < 12; i++)
             {
                 var img1 = Phaser.Math.Between(0, 117-i);
-                //console.log(img1, i);
+                console.log(img1, i);
                 randArray[i] = imgArray[img1];
+                console.log(randArray[i]);
                 imgArray.splice(img1, 1);
             }
         }
@@ -114,9 +116,11 @@
         var xi = 0;
         for (p = 0; p < 3; p++) {
             for (q = 0; q < 4; q++) {
-                localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+xi] = randArray[xi].name;
-                localStorage["itemPos"+xi] = xi;
-                localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+xi] = randArray[xi].color;
+                localStorage[localStorage["ID"]+localStorage["Menu"]+"item"+xi] = randArray[xi].name; //store item name
+                localStorage["itemPos"+xi] = xi; //store item position
+                localStorage[localStorage["ID"]+localStorage["Menu"]+"color"+xi] = randArray[xi].color; //store item color
+
+                localStorage.setItem(localStorage["ID"]+localStorage["Menu"]+"OBJ"+xi, JSON.stringify(randArray[xi])); //store Object using stringify and parse
 
                 var image = this.add.image(390+(160*q), 150+160*p, randArray[xi].photo);
                 image.setDisplaySize(100,100);
